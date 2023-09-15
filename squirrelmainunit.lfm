@@ -1,0 +1,2340 @@
+object SquirrelMainForm: TSquirrelMainForm
+  Left = 715
+  Height = 771
+  Top = 311
+  Width = 900
+  Caption = 'Squirrel'
+  ClientHeight = 771
+  ClientWidth = 900
+  Constraints.MinHeight = 600
+  Constraints.MinWidth = 900
+  DesignTimePPI = 144
+  OnCreate = FormCreate
+  OnDestroy = FormDestroy
+  Position = poScreenCenter
+  ShowHint = True
+  LCLVersion = '2.2.6.0'
+  object MainNotebook: TExtendedNotebook
+    Left = 0
+    Height = 741
+    Top = 0
+    Width = 900
+    ActivePage = PasswordSheet
+    Align = alClient
+    TabIndex = 0
+    TabOrder = 0
+    OnChange = MainNotebookChange
+    OnChanging = MainNotebookChanging
+    object PasswordSheet: TTabSheet
+      Caption = 'Password'
+      ClientHeight = 703
+      ClientWidth = 892
+      object PasswordNotebook: TExtendedNotebook
+        Left = 12
+        Height = 444
+        Top = 72
+        Width = 864
+        ActivePage = WellBeingSheet
+        TabIndex = 0
+        TabOrder = 0
+        OnChange = PasswordNotebookChange
+        object WellBeingSheet: TTabSheet
+          Caption = 'Well being'
+          ClientHeight = 406
+          ClientWidth = 856
+          object FeelFine: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 12
+            Width = 102
+            Caption = 'I feel fine'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 0
+          end
+          object Terrific: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 48
+            Width = 122
+            Caption = 'I feel terrific'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object Sleepy: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 84
+            Width = 80
+            Caption = 'sleepy'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object Tired: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 120
+            Width = 66
+            Caption = 'tired'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Jogging: TCheckBox
+            Tag = 9
+            Left = 264
+            Height = 29
+            Top = 12
+            Width = 94
+            Caption = 'Jogging'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object RideAbike: TCheckBox
+            Tag = 9
+            Left = 264
+            Height = 29
+            Top = 48
+            Width = 112
+            Caption = 'ride a bike'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Gym: TCheckBox
+            Tag = 9
+            Left = 264
+            Height = 29
+            Top = 84
+            Width = 66
+            Caption = 'gym'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object SwimmingPool: TCheckBox
+            Tag = 9
+            Left = 264
+            Height = 29
+            Top = 120
+            Width = 154
+            Caption = 'swimming pool'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object Yoga: TCheckBox
+            Tag = 9
+            Left = 264
+            Height = 29
+            Top = 156
+            Width = 70
+            Caption = 'yoga'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object CouldntSleep: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 12
+            Width = 140
+            Caption = 'couldn''t sleep'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Headache: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 48
+            Width = 105
+            Caption = 'headache'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Sick: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 156
+            Width = 59
+            Caption = 'sick'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object SoreThroat: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 84
+            Width = 117
+            Caption = 'sore throat'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object JustCold: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 192
+            Width = 97
+            Caption = 'just cold'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object Cough: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 120
+            Width = 80
+            Caption = 'cough'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object RunningNose: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 156
+            Width = 134
+            Caption = 'running nose'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 16
+          end
+          object Dizziness: TCheckBox
+            Tag = 9
+            Left = 492
+            Height = 29
+            Top = 192
+            Width = 102
+            Caption = 'Dizziness'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 17
+          end
+          object Hungry: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 228
+            Width = 86
+            Caption = 'hungry'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object Checksum1: TEdit
+            Tag = 1000
+            Left = 720
+            Height = 33
+            Hint = 'Checksum doesn''t take part in password calculation. It is just for the user to validate/compare page information.'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 18
+          end
+          object Label4: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object WeatherSheet: TTabSheet
+          Caption = 'Weather'
+          ClientHeight = 406
+          ClientWidth = 856
+          object Sunshine: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 12
+            Width = 99
+            Caption = 'sunshine'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 0
+          end
+          object Windy: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 108
+            Width = 77
+            Caption = 'windy'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object Clouds: TCheckBox
+            Tag = 9
+            Left = 288
+            Height = 29
+            Top = 12
+            Width = 82
+            Caption = 'clouds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Breeze: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 60
+            Width = 118
+            Caption = 'nice breeze'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object GustsOfWind: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 156
+            Width = 138
+            Caption = 'gusts of wind'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Rain: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 204
+            Width = 59
+            Caption = 'rain'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object Downpour: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 252
+            Width = 113
+            Caption = 'downpour'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object Cold: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 60
+            Width = 64
+            Caption = 'cold'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object Freezing: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 12
+            Width = 93
+            Caption = 'freezing'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Warm: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 108
+            Width = 74
+            Caption = 'warm'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object Hot: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 156
+            Width = 60
+            Caption = 'Hot'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 16
+          end
+          object Temperature: TSpinEditEx
+            Tag = 9
+            Left = 612
+            Height = 33
+            Top = 204
+            Width = 111
+            MaxLength = 0
+            NumbersOnly = True
+            TabOrder = 17
+            OnChange = TemperatureChange
+            MaxValue = 200
+            MinValue = -150
+            NullValue = 0
+            Value = 21
+          end
+          object Label2: TLabel
+            Left = 432
+            Height = 39
+            Top = 204
+            Width = 168
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'temperature:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object TempScale: TLabel
+            Left = 732
+            Height = 39
+            Top = 206
+            Width = 36
+            AutoSize = False
+            Caption = '°C'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object Fahrenheit: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 252
+            Width = 112
+            Caption = 'Fahrenheit'
+            OnChange = FahrenheitChange
+            TabOrder = 18
+          end
+          object Snow: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 300
+            Width = 72
+            Caption = 'snow'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object Hail: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 348
+            Width = 57
+            Caption = 'hail'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object HeavyClouds: TCheckBox
+            Tag = 9
+            Left = 288
+            Height = 29
+            Top = 60
+            Width = 133
+            Caption = 'heavy clouds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object StormyClouds: TCheckBox
+            Tag = 9
+            Left = 288
+            Height = 29
+            Top = 108
+            Width = 143
+            Caption = 'stormy clouds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object Storm: TCheckBox
+            Tag = 9
+            Left = 288
+            Height = 29
+            Top = 156
+            Width = 77
+            Caption = 'storm'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object Rainbow: TCheckBox
+            Tag = 9
+            Left = 288
+            Height = 29
+            Top = 348
+            Width = 94
+            Caption = 'rainbow'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Checksum2: TEdit
+            Tag = 1001
+            Left = 720
+            Height = 33
+            Hint = 'Verify temperature separately'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 19
+          end
+          object Label5: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object ParkSheet: TTabSheet
+          Caption = 'Park/Forest'
+          ClientHeight = 406
+          ClientWidth = 856
+          object Tranquility: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 24
+            Width = 109
+            Caption = 'tranquility'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 0
+          end
+          object SeenSquirrel: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 72
+            Width = 185
+            Caption = 'have seen a squirrel'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object Rabbit: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 120
+            Width = 77
+            Caption = 'rabbit'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object Rat: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 168
+            Width = 51
+            Caption = 'rat'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Fox: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 216
+            Width = 55
+            Caption = 'fox'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object Dog: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 264
+            Width = 63
+            Caption = 'dog'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object OtherPeople: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 312
+            Width = 132
+            Caption = 'other people'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object FallenTree: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 24
+            Width = 107
+            Caption = 'fallen tree'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object Puddles: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 72
+            Width = 94
+            Caption = 'puddles'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Mud: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 120
+            Width = 67
+            Caption = 'mud'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object Stream: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 168
+            Width = 84
+            Caption = 'stream'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object River: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 264
+            Width = 64
+            Caption = 'river'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Lake: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 312
+            Width = 61
+            Caption = 'lake'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Creek: TCheckBox
+            Tag = 9
+            Left = 360
+            Height = 29
+            Top = 216
+            Width = 71
+            Caption = 'creek'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object Fishing: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 24
+            Width = 83
+            Caption = 'fishing'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object WatchingBirds: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 72
+            Width = 146
+            Caption = 'watching birds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object Hunting: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 120
+            Width = 91
+            Caption = 'hunting'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 16
+          end
+          object Deer: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 168
+            Width = 65
+            Caption = 'deer'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 17
+          end
+          object SmallGame: TCheckBox
+            Tag = 9
+            Left = 612
+            Height = 29
+            Top = 216
+            Width = 121
+            Caption = 'small game'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 18
+          end
+          object Checksum3: TEdit
+            Tag = 1002
+            Left = 720
+            Height = 33
+            Hint = 'Checksum doesn''t take part in password calculation. It is just for the user to validate/compare page information.'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 19
+          end
+          object Label6: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object CalendarSheet: TTabSheet
+          Caption = 'Calendar'
+          ClientHeight = 406
+          ClientWidth = 856
+          object Calendar: TCalendar
+            Left = 12
+            Height = 250
+            Top = 12
+            Width = 309
+            DateTime = 44541
+            OnChange = CalendarChange
+            TabOrder = 0
+          end
+          object UseCalendar: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 348
+            Width = 128
+            Caption = 'use calendar'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object Tomorrow: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 12
+            Width = 110
+            Caption = 'tomorrow'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object Yesterday: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 60
+            Width = 106
+            Caption = 'yesterday'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Birthday: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 108
+            Width = 96
+            Caption = 'birthday'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object Anniversary: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 156
+            Width = 119
+            Caption = 'anniversary'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object Holiday: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 204
+            Width = 88
+            Caption = 'holiday'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object TimeOff: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 252
+            Width = 93
+            Caption = 'time off'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object Mother: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 12
+            Width = 88
+            Caption = 'mother'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object Father: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 60
+            Width = 76
+            Caption = 'father'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object Sister: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 108
+            Width = 71
+            Caption = 'sister'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object Brother: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 156
+            Width = 89
+            Caption = 'brother'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Uncle: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 204
+            Width = 71
+            Caption = 'uncle'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Aunt: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 252
+            Width = 65
+            Caption = 'aunt'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object Cousin: TCheckBox
+            Tag = 9
+            Left = 636
+            Height = 29
+            Top = 300
+            Width = 81
+            Caption = 'cousin'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object Friend: TCheckBox
+            Tag = 9
+            Left = 432
+            Height = 29
+            Top = 300
+            Width = 76
+            Caption = 'friend'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Checksum4: TEdit
+            Tag = 1003
+            Left = 720
+            Height = 33
+            Hint = 'Verify calendar date separately.'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 16
+          end
+          object Label7: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object GardenSheet: TTabSheet
+          Caption = 'Garden'
+          ClientHeight = 406
+          ClientWidth = 856
+          object Seeds: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 12
+            Width = 75
+            Caption = 'seeds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 0
+          end
+          object Seedlings: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 60
+            Width = 104
+            Caption = 'seedlings'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object PruningScissors: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 12
+            Width = 158
+            Caption = 'pruning scissors'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object Slugs: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 108
+            Width = 71
+            Caption = 'slugs'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object RaisedBeds: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 156
+            Width = 121
+            Caption = 'raised beds'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Planters: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 204
+            Width = 93
+            Caption = 'planters'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object Bucket: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 60
+            Width = 83
+            Caption = 'bucket'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Apples: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 12
+            Width = 82
+            Caption = 'apples'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Blackberry: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 60
+            Width = 112
+            Caption = 'blackberry'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object Raspberry: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 108
+            Width = 105
+            Caption = 'raspberry'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object Strawberry: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 156
+            Width = 113
+            Caption = 'strawberry'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 16
+          end
+          object Tomatoes: TCheckBox
+            Tag = 9
+            Left = 602
+            Height = 29
+            Top = 204
+            Width = 106
+            Caption = 'tomatoes'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 17
+          end
+          object Potatoes: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 252
+            Width = 101
+            Caption = 'potatoes'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 18
+          end
+          object Flowers: TCheckBox
+            Tag = 9
+            Left = 600
+            Height = 29
+            Top = 300
+            Width = 87
+            Caption = 'flowers'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 19
+          end
+          object Shed: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 108
+            Width = 68
+            Caption = 'shed'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object Soil: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 252
+            Width = 57
+            Caption = 'soil'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object Compost: TCheckBox
+            Tag = 9
+            Left = 24
+            Height = 29
+            Top = 300
+            Width = 101
+            Caption = 'compost'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object Polytunnel: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 204
+            Width = 114
+            Caption = 'polytunnel'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object Greenhouse: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 252
+            Width = 123
+            Caption = 'greenhouse'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Tools: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 156
+            Width = 70
+            Caption = 'tools'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object Checksum5: TEdit
+            Tag = 1004
+            Left = 720
+            Height = 33
+            Hint = 'Checksum doesn''t take part in password calculation. It is just for the user to validate/compare page information.'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 20
+          end
+          object Label8: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object NewsSheet: TTabSheet
+          Caption = 'News'
+          ClientHeight = 406
+          ClientWidth = 856
+          object Earthquake: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 12
+            Width = 118
+            Caption = 'earthquake'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 10
+          end
+          object Volcano: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 60
+            Width = 92
+            Caption = 'volcano'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 11
+          end
+          object Tsunami: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 108
+            Width = 93
+            Caption = 'tsunami'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 12
+          end
+          object Tornado: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 156
+            Width = 94
+            Caption = 'tornado'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 13
+          end
+          object Accident: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 60
+            Width = 95
+            Caption = 'accident'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 1
+          end
+          object Bus: TCheckBox
+            Tag = 9
+            Left = 96
+            Height = 29
+            Top = 108
+            Width = 59
+            Caption = 'bus'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 3
+          end
+          object Lorry: TCheckBox
+            Tag = 9
+            Left = 180
+            Height = 29
+            Top = 108
+            Width = 66
+            Caption = 'lorry'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 4
+          end
+          object Fire: TCheckBox
+            Tag = 9
+            Left = 14
+            Height = 29
+            Top = 156
+            Width = 55
+            Caption = 'fire'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 5
+          end
+          object Explosion: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 204
+            Width = 106
+            Caption = 'explosion'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 6
+          end
+          object Riots: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 252
+            Width = 65
+            Caption = 'riots'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 7
+          end
+          object Protests: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 300
+            Width = 95
+            Caption = 'protests'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 8
+          end
+          object Demonstration: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 348
+            Width = 147
+            Caption = 'demonstration'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 9
+          end
+          object Collision: TCheckBox
+            Tag = 9
+            Left = 14
+            Height = 29
+            Top = 12
+            Width = 94
+            Caption = 'collision'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 0
+          end
+          object Car: TCheckBox
+            Tag = 9
+            Left = 12
+            Height = 29
+            Top = 108
+            Width = 53
+            Caption = 'car'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 2
+          end
+          object Hurricane: TCheckBox
+            Tag = 9
+            Left = 324
+            Height = 29
+            Top = 204
+            Width = 102
+            Caption = 'hurricane'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 14
+          end
+          object Scandal: TCheckBox
+            Tag = 9
+            Left = 588
+            Height = 29
+            Top = 12
+            Width = 89
+            Caption = 'scandal'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 15
+          end
+          object Corruption: TCheckBox
+            Tag = 9
+            Left = 588
+            Height = 29
+            Top = 60
+            Width = 113
+            Caption = 'corruption'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 16
+          end
+          object Gossip: TCheckBox
+            Tag = 9
+            Left = 588
+            Height = 29
+            Top = 108
+            Width = 83
+            Caption = 'gossip'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 17
+          end
+          object Hero: TCheckBox
+            Tag = 9
+            Left = 588
+            Height = 29
+            Top = 156
+            Width = 66
+            Caption = 'hero'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 18
+          end
+          object HowMany: TSpinEditEx
+            Tag = 9
+            Left = 588
+            Height = 33
+            Top = 252
+            Width = 154
+            MaxLength = 0
+            TabOrder = 20
+            OnChange = HowManyChange
+            MaxValue = 10000
+            NullValue = 0
+            Value = 0
+          end
+          object Label3: TLabel
+            Left = 444
+            Height = 40
+            Top = 252
+            Width = 134
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'How many:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+          object Charity: TCheckBox
+            Tag = 9
+            Left = 588
+            Height = 29
+            Top = 204
+            Width = 82
+            Caption = 'charity'
+            OnChange = PasswdCheckboxChange
+            TabOrder = 19
+          end
+          object Checksum6: TEdit
+            Tag = 1005
+            Left = 720
+            Height = 33
+            Hint = 'Verify "how many" separately.'
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            ReadOnly = True
+            TabStop = False
+            TabOrder = 21
+          end
+          object Label9: TLabel
+            Left = 588
+            Height = 36
+            Top = 348
+            Width = 120
+            Alignment = taRightJustify
+            AutoSize = False
+            Caption = 'Checksum:'
+            Layout = tlCenter
+            ParentColor = False
+          end
+        end
+        object SettingsSheet: TTabSheet
+          Caption = 'Settings'
+          ClientHeight = 406
+          ClientWidth = 856
+          object CodesMemo: TMemo
+            Left = 12
+            Height = 324
+            Top = 60
+            Width = 828
+            ScrollBars = ssAutoBoth
+            TabOrder = 0
+          end
+          object DefaultStateButton: TButton
+            Left = 12
+            Height = 38
+            Top = 12
+            Width = 156
+            Caption = 'Default state'
+            OnClick = DefaultStateButtonClick
+            TabOrder = 1
+          end
+          object ExportStateButton: TButton
+            Left = 372
+            Height = 38
+            Top = 12
+            Width = 168
+            Caption = 'Export state'
+            OnClick = ExportStateButtonClick
+            TabOrder = 2
+          end
+          object ImportState: TButton
+            Left = 180
+            Height = 38
+            Top = 12
+            Width = 180
+            Caption = 'Import state'
+            OnClick = ImportStateClick
+            TabOrder = 3
+          end
+          object SaveStateButton: TButton
+            Left = 552
+            Height = 38
+            Top = 12
+            Width = 120
+            Caption = 'Save state'
+            OnClick = SaveStateButtonClick
+            TabOrder = 4
+          end
+          object LoadStateButton: TButton
+            Left = 684
+            Height = 38
+            Top = 12
+            Width = 120
+            Caption = 'Load state'
+            OnClick = LoadStateButtonClick
+            TabOrder = 5
+          end
+        end
+      end
+      object Label1: TLabel
+        Left = 24
+        Height = 25
+        Top = 22
+        Width = 137
+        Caption = 'Common phrase:'
+        ParentColor = False
+      end
+      object CommonPhrase: TEdit
+        Left = 192
+        Height = 33
+        Top = 12
+        Width = 372
+        OnChange = CommonPhraseChange
+        TabOrder = 1
+        Text = 'squirrel'
+      end
+      object CopyPasswordToClipboard: TButton
+        Left = 684
+        Height = 40
+        Top = 552
+        Width = 192
+        Caption = 'Copy to clipboard'
+        OnClick = CopyPasswordToClipboardClick
+        TabOrder = 2
+      end
+      object PasswdHexEdit: TEdit
+        Left = 12
+        Height = 33
+        Top = 636
+        Width = 864
+        ReadOnly = True
+        TabOrder = 3
+      end
+      object PasswdEdit: TEdit
+        Left = 12
+        Height = 33
+        Top = 552
+        Width = 660
+        ReadOnly = True
+        TabOrder = 4
+      end
+      object Label11: TLabel
+        Left = 12
+        Height = 25
+        Top = 528
+        Width = 79
+        Caption = 'Password:'
+        ParentColor = False
+      end
+      object Label12: TLabel
+        Left = 12
+        Height = 25
+        Top = 612
+        Width = 111
+        Caption = 'Password hex:'
+        ParentColor = False
+      end
+    end
+    object OpenTextSheet: TTabSheet
+      Caption = 'Open text'
+      ClientHeight = 703
+      ClientWidth = 892
+      object OpenText: TMemo
+        Left = 12
+        Height = 677
+        Top = 12
+        Width = 871
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Font.Height = -23
+        Font.Name = 'Monospace'
+        ParentFont = False
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+    end
+    object EncryptionSheet: TTabSheet
+      Caption = 'Encryption'
+      ClientHeight = 703
+      ClientWidth = 892
+      object EncryptedText: TMemo
+        Left = 12
+        Height = 631
+        Top = 60
+        Width = 871
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        Font.Height = -23
+        Font.Name = 'Monospace'
+        ParentFont = False
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+      object EncryptButton: TButton
+        Left = 12
+        Height = 38
+        Top = 12
+        Width = 112
+        Caption = 'Encrypt'
+        OnClick = EncryptButtonClick
+        TabOrder = 1
+      end
+      object DecryptButton: TButton
+        Left = 144
+        Height = 38
+        Top = 12
+        Width = 112
+        Caption = 'Decrypt'
+        OnClick = DecryptButtonClick
+        TabOrder = 2
+      end
+      object ChooseRijndael: TRadioButton
+        Left = 420
+        Height = 29
+        Top = 12
+        Width = 92
+        Caption = 'Rijndael'
+        Checked = True
+        TabOrder = 3
+        TabStop = True
+      end
+      object ChooseTwoFish: TRadioButton
+        Left = 564
+        Height = 29
+        Top = 12
+        Width = 94
+        Caption = 'TwoFish'
+        TabOrder = 4
+      end
+      object ChooseSerpent: TRadioButton
+        Left = 720
+        Height = 29
+        Top = 12
+        Width = 91
+        Caption = 'Serpent'
+        TabOrder = 5
+      end
+      object Label13: TLabel
+        Left = 312
+        Height = 25
+        Top = 18
+        Width = 67
+        Caption = 'Method:'
+        ParentColor = False
+      end
+    end
+    object SteganographySheet: TTabSheet
+      Caption = 'Steganography'
+      ClientHeight = 703
+      ClientWidth = 892
+      object SteganographyPageControl: TPageControl
+        Left = 12
+        Height = 628
+        Top = 72
+        Width = 871
+        ActivePage = SteganoSheet
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        TabIndex = 1
+        TabOrder = 0
+        OnChange = SteganographyPageControlChange
+        object OpenImageSheet: TTabSheet
+          Caption = 'Open image'
+          ClientHeight = 590
+          ClientWidth = 863
+          object OpenImageScrollbox: TScrollBox
+            Left = 0
+            Height = 488
+            Top = 60
+            Width = 857
+            HorzScrollBar.Page = 90
+            HorzScrollBar.Tracking = True
+            VertScrollBar.Page = 90
+            VertScrollBar.Tracking = True
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            ClientHeight = 484
+            ClientWidth = 853
+            TabOrder = 0
+            object OpenImage: TImage
+              Left = 0
+              Height = 90
+              Top = 0
+              Width = 90
+              AutoSize = True
+            end
+          end
+          object ImageSaveAs: TButton
+            Left = 677
+            Height = 38
+            Top = 12
+            Width = 168
+            Anchors = [akTop, akRight]
+            Caption = 'Save Image As'
+            OnClick = ImageSaveAsClick
+            TabOrder = 1
+            TabStop = False
+          end
+        end
+        object SteganoSheet: TTabSheet
+          Caption = 'Method'
+          ClientHeight = 590
+          ClientWidth = 863
+          object SteganoAlgorithmSelection: TRadioGroup
+            Left = 12
+            Height = 168
+            Top = 12
+            Width = 278
+            AutoFill = True
+            Caption = ' Algorithm: '
+            ChildSizing.LeftRightSpacing = 6
+            ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+            ChildSizing.EnlargeVertical = crsHomogenousChildResize
+            ChildSizing.ShrinkHorizontal = crsScaleChilds
+            ChildSizing.ShrinkVertical = crsScaleChilds
+            ChildSizing.Layout = cclLeftToRightThenTopToBottom
+            ChildSizing.ControlsPerLine = 1
+            ClientHeight = 138
+            ClientWidth = 274
+            ItemIndex = 1
+            Items.Strings = (
+              'Naive'
+              'Random X'
+            )
+            OnClick = SteganoAlgorithmSelectionClick
+            TabOrder = 0
+          end
+          object TextOptions: TGroupBox
+            Left = 300
+            Height = 170
+            Top = 12
+            Width = 432
+            Caption = ' Text options: '
+            ClientHeight = 140
+            ClientWidth = 428
+            TabOrder = 1
+            object UsePasswordCheckBox: TCheckBox
+              Left = 12
+              Height = 29
+              Top = 24
+              Width = 141
+              Caption = 'Use password'
+              TabOrder = 1
+              TabStop = False
+            end
+            object SteganoInsert: TButton
+              Left = 276
+              Height = 38
+              Top = 24
+              Width = 112
+              Caption = 'Insert'
+              OnClick = SteganoInsertClick
+              TabOrder = 2
+            end
+            object SteganoExtractButton: TButton
+              Left = 276
+              Height = 38
+              Top = 81
+              Width = 112
+              Caption = 'Extract'
+              OnClick = SteganoExtractButtonClick
+              TabOrder = 3
+            end
+            object UseEncryptedTextCheckBox: TCheckBox
+              Left = 12
+              Height = 29
+              Top = 84
+              Width = 177
+              Caption = 'Use encrypted text'
+              TabOrder = 0
+            end
+          end
+          object ClearGroupBox: TGroupBox
+            Left = 12
+            Height = 158
+            Top = 192
+            Width = 278
+            Caption = ' Clear:  '
+            ClientHeight = 128
+            ClientWidth = 274
+            TabOrder = 2
+            object ClearToZero: TButton
+              Left = 24
+              Height = 38
+              Top = 12
+              Width = 232
+              Caption = 'Clear to zero'
+              OnClick = ClearToZeroClick
+              TabOrder = 0
+            end
+            object RandomClearButton: TButton
+              Left = 24
+              Height = 38
+              Top = 72
+              Width = 228
+              Caption = 'Random clear'
+              OnClick = RandomClearButtonClick
+              TabOrder = 1
+            end
+          end
+        end
+        object CovertImageSheet: TTabSheet
+          Caption = 'Covert image'
+          ClientHeight = 590
+          ClientWidth = 863
+          object ColourCheckBox: TCheckBox
+            Left = 408
+            Height = 29
+            Top = 12
+            Width = 83
+            Caption = 'Colour'
+            Checked = True
+            OnChange = RedPlaneChange
+            State = cbChecked
+            TabOrder = 0
+          end
+          object CovertImageScrollbox: TScrollBox
+            Left = 0
+            Height = 527
+            Top = 60
+            Width = 866
+            HorzScrollBar.Page = 90
+            HorzScrollBar.Tracking = True
+            VertScrollBar.Page = 90
+            VertScrollBar.Tracking = True
+            Anchors = [akTop, akLeft, akRight, akBottom]
+            ClientHeight = 523
+            ClientWidth = 862
+            TabOrder = 1
+            object CovertImage: TImage
+              Left = 0
+              Height = 90
+              Top = 0
+              Width = 90
+              AutoSize = True
+            end
+          end
+          object RedPlane: TCheckBox
+            Left = 96
+            Height = 29
+            Top = 12
+            Width = 61
+            Caption = 'Red'
+            Checked = True
+            OnChange = RedPlaneChange
+            State = cbChecked
+            TabOrder = 2
+          end
+          object GreenPlane: TCheckBox
+            Left = 192
+            Height = 29
+            Top = 12
+            Width = 76
+            Caption = 'Green'
+            Checked = True
+            OnChange = RedPlaneChange
+            State = cbChecked
+            TabOrder = 3
+          end
+          object BluePlane: TCheckBox
+            Left = 300
+            Height = 29
+            Top = 12
+            Width = 63
+            Caption = 'Blue'
+            Checked = True
+            OnChange = RedPlaneChange
+            State = cbChecked
+            TabOrder = 4
+          end
+          object Label10: TLabel
+            Left = 0
+            Height = 25
+            Top = 18
+            Width = 62
+            Caption = 'Display:'
+            ParentColor = False
+          end
+          object CovertImageSaveAs: TButton
+            Left = 686
+            Height = 38
+            Top = 12
+            Width = 168
+            Anchors = [akTop, akRight]
+            Caption = 'Save Image As'
+            OnClick = CovertImageSaveAsClick
+            TabOrder = 5
+            TabStop = False
+          end
+        end
+      end
+      object OpenFileNameEdit: TFileNameEdit
+        Left = 12
+        Height = 33
+        Top = 12
+        Width = 871
+        OnAcceptFileName = OpenFileNameEditAcceptFileName
+        FilterIndex = 0
+        HideDirectories = False
+        ButtonWidth = 34
+        NumGlyphs = 1
+        Anchors = [akTop, akLeft, akRight]
+        MaxLength = 0
+        TabOrder = 1
+        OnChange = OpenFileNameEditChange
+      end
+    end
+    object AboutSheet: TTabSheet
+      Caption = 'About'
+      ClientHeight = 703
+      ClientWidth = 892
+      object AboutMemo: TMemo
+        Left = 12
+        Height = 571
+        Top = 120
+        Width = 871
+        Anchors = [akTop, akLeft, akRight, akBottom]
+        ScrollBars = ssAutoBoth
+        TabOrder = 0
+        WordWrap = False
+      end
+      object SquirrelImage: TImage
+        Left = 12
+        Height = 64
+        Top = 12
+        Width = 64
+        AutoSize = True
+        OnClick = SquirrelImageClick
+        Picture.Data = {
+          055449636F6E3E32000000000100010040400000010018002832000016000000
+          2800000040000000800000000100180000000000000000007800000078000000
+          00000000000000003D3D52413F554441554640503F3B4A49424F574E5C414051
+          2D3046282D452A30462B3349242D461D28461220431524520D1D4E16285A2438
+          72263B7531447D2F46813350865B729A7E8AA7969BB2B3B3C2D0C9CDDCD0D2D9
+          D0D1D1CACBB9B7BDA9A8B2A9A9B4B5B3BDBEBBC1C4BDC3C2B9C0B3AAB68283A1
+          58679A3E5A964D5C954C598E47517F6B79999BABBBA6B4C2A6B3C1A6B2BFA4AF
+          BDA2AEBBA2ACB9A1A9B7A1A8B5A0A7B4A0A6B39FA7B39FA7B39EA5B29DA6B09B
+          A4B19AA3AE98A2AD3E3D52403F56443F534C445449404D4E4753534E5D3D3D51
+          2E3146292E452F334A30354C2F344E252F4E14214811214C192B5E1E2C612332
+          662C3D7330467C2A4077223972304A7C566D956A7A9AA7AABECFC7C9DACFD0D9
+          D1D1CDC7C9BDBABFB5B2BCAEAEB8B5B5BFC2C0C5C9C3C7CEC6C8C8BFC5B4ADB8
+          918EA96C739C586190425186505A895660888E9FB2A2B1BEA2B1BEA1AFBDA1AC
+          BA9FA9B69EA7B5A0A6B3A0A5B29EA4AF9EA3AE9DA3AF9CA2AF9AA1AE99A1AC97
+          A1AC97A0AB96A1AA3F3C553F3D53423D524D4657504552544B564E4A5C37384C
+          2C3045292E472D324A33374E363B5327324F1C2A5215235117265A2B396C2D39
+          6E1D2A5D1D2D5D2A3E702B407634487A4C618B6474959FA3B5C6BFC2D4CDCCD6
+          CDCECBC4C7C0BCC2B8B7BFADAEB7B2B3BDC2C0C4CAC5C8D3CBCDD3CACCCAC1C4
+          B4AAB5A7A0B1747392434F7F525C8A535A847F8FA79EADBBA1ADBAA0ABB79EAA
+          B69CA6B39BA4B09BA2AD9AA0AC9A9FAB989FAA9AA0AB999FAB979EA9959DA994
+          9EA8939EA7929EA7413C55423E534641534D4353554B5859505D4A485B32354A
+          2C31452B2F462D334B30344D34394E28314B212C511928551726571B285A2332
+          642636662636662D3D6C3243713A4B744A5B826976939699A9BAB5B9CFC7C7D0
+          C9CACAC3C6BEBABEB9B8BEAEB0BAB2B4BCBEBDC1C9C3C7D3CCCDD8CDCED3C7C9
+          C6BCC3B5AEBB908DA36567886A6D8F5158846A799A97A6B59DAAB49CA9B29BA5
+          B199A1AE979FAB979DA8969BA6959AA6959BA6979CA7969BA5969AA59399A493
+          9AA4929AA4929CA44A435B4B44594E4858514958584E5A5C536345445737394D
+          31334A2A30442F344A2D3349373C5430385424304E1B2B5217295919295E1C2C
+          5E1D2E6121316124346031426E3749704957785E6A86888E9FA6A7B0C0BABDCA
+          C3C4C7C1C3BDB9BEBCBBC0B4B3BAB8B6BDBBB9BEC7C2C4D2CACBD5CBCCD0C6C7
+          C5BEC4A9AABA999DB29B9FB69091A86E7194687293919FB09AA7B398A3AF97A0
+          AB959DA79399A49497A29295A09396A19497A29397A19496A19396A19096A092
+          97A19298A2939AA44D465C4F485D524C5D574D5B6256636258684F4B60404156
+          3E3F5432364F31364F373A52363951363C592B35541F2D511524501B2A591C2B
+          5B2131601D2D5B1D2F5C293A6631446E4756794E5B786D78918D93A5AEACB2C0
+          B9BEC4BDC0C0BABFBBB9BDB6B5B9BEBABFBFBBBEC6BFC3CDC5C6CAC2C3C6BFC1
+          BCB9C0989AA88A92AB8893AF828CAC707A9F6B7499828FA794A2AF95A0AA919A
+          A49196A190939F8F919C8D909C8E919C90929E91949E91939F90959E90959F91
+          96A09398A1929AA350495F544C5F514A5C584E5D6A5E6B655B6857506546455A
+          47465C3C3E57383B55363A54353B52313755383F5E2E395B1E2C551A28511C2C
+          5521315D202E5A1E32612639672E406A4656794C587665728D838B9D9B9DA9AF
+          ACB4BAB6B9BEBABDB6B2BAB7B3B8C2BCC0C4BDC1C3BBBFC3BBBDC1BABCB8B4BB
+          AAA8AE9797A3858CA077809C67769A60729E5E6C976A769B8C98A88E9BA38C95
+          9E8C919C8A8E99888B96888A95898B978C8E998E919C8F929D90929E91949F92
+          969F9398A19199A1534D675B51665B4F625C50626A5D6B6B606E5E576A4C4B60
+          49485F43445B3C3D56393C543439542C34532A3455263054222F532632582732
+          562B355E27325924335F2434622A3D6B394C744B5878606D88737B8E858C9E99
+          9DA8AAA8AFB7B2B8B1AFB6B4B2B8BDB8BEC1BBBDBCB5BAC2BABCB4ADAFACA6AC
+          9A96A1878996747B9066708F56658C4E5F8D4F5E90606B938791A38C97A18991
+          9B888C97868893848691848692878995898B968B8D9A8C8F9C8F909D90939E8F
+          94A09096A09296A15553715B53685F54675E53656B5F6C6F6370655A6C5E596E
+          504E654949643B3D593C3C57363A57313A592E375A26305228335528335A2730
+          56343C61363F67303A6535426E283B682E3F6A3D4F744256764C5E7C5F6B7F79
+          83969598A4A6A6AFB1AEB4ADABB3B5B1B6BDB8BBB6B1B6BEB7B9B2ABAEAAA3AA
+          8C8B95898A9873798E5966854E5D8652618E57639363699180889D87909B888C
+          9686889483858F81838D82848F868893868995898C978B8E998D8E9C8E919C8F
+          929F90939E8F949F5B5D7E5C58726155686154676A5D6A7668736C62715E596C
+          514F664B4B63393A54383957363A582E36582D36562F3A5C2C355A2933592E37
+          602D375C3D43693C426B37416C2333611B2B5229395F293E663148753E527255
+          65827884999296A4A6A7AEA8A6AFADACB2B9B3B9B0ABB0B5AFB2ACA7AB97929C
+          888A978B8D9D6A70885B6686555F825B638B575E8A6E7295868D9E879099858B
+          9484869181838D80828A81828D858792858793878996898B978C8D998C8E9C8C
+          909C8D919C8D929E636C89666B86646174635768675A687869746F6474615B6E
+          58546C4A496141425E3A3C5B383A5B34395C2F385D30385D2F395D313B62323B
+          62303960333B61363E6537416B2E3A6721305B1A2C5722355D263A6728416C33
+          4C71546886808B9E9C9EAAA6A6AFA2A3AEB2AFB6B2ADB3B3ADB2A6A1A492909C
+          898A9B8386986D748E5A64834B587F4E5581575D88767C99868F9D878E988489
+          9383869080828C7F808B81828D858693858693878896898B97898B978B8D998D
+          8F9A8E909C8E919D6B77926D79906A6E83686173685C6B7567717668756A6272
+          5E5B6F4E4C6549486441415F4043643A3F5F3C4267363E623139603039622E38
+          5E303A5D373F652D375B323C653B446F2F3F6E202F5A1D2F5C2134621F376822
+          3C68455C8179879E9699A6A4A5ADA3A4AEA9AAB1B2B0B3AFAAB1B1AAAC96929D
+          84869774798F6E728E57638648577F50598662698F82889E88939D878E988488
+          9382858F7E828B7E818B80828D848693848692858795888A96878A988B8C988D
+          8E9B8D8F9A8D919C717F95738396717C8F6E6F7E6B6170736572786A776E6373
+          5F5A6D5350694C4D694E4D6A474765414466464A6C43496E363F62333C61353E
+          62353C5F353C63384066323961323A652A355F263461203363223563243A6437
+          4B6F5D6B896E768A8B8E9A9697A2A0A2AA9E9FAAA7A7AFAAA8B1B5AFB3A7A1A7
+          80839767718B6B74925965894D5A854E5A85646C8F828C9D89939E878E978388
+          9281858F7D818C7E808C80838E848792848593868894878896878B988A8C9A8B
+          8D998B90998C8F9D7382957484977584967077876D68797366747C6D7A716676
+          645D725A576E51506C504F6C4D4C694849683F43623F44643F4668484E6F3F44
+          673E466A353B61323A603139602C38642535612436652A3E6D314874374E724F
+          617F56657C5763756C75858185938A8D9B8E93A29B9DA9A2A2ADA7A7AEB2ACB1
+          95919C797C926970905E698D545D8658608572799586929F87939B868D948287
+          9180848E7D818B7E818C818491818390848695868894878997898C998C8E9A8D
+          8E9A8C8F9B8A919D728394738495758697758395727587716B7A7A6C79786B79
+          6B63745E59715B59704E4F6C4E4D674A49633D415E2E3859333A593F46674145
+          65464768424769333B5E27305426335B2C39632F3E6A2F416E2C436E3146693D
+          5170505F7C5769815A687F6672856C778A727E92808A9C86919F8A93A3979AA7
+          9D9DA78E8E9C6B6F8A666E9161688C6369887C83998A97A18F999F858D958387
+          9280868D7C818A7E808D808491808491858694868795878B988B8D998D8E9B8D
+          8F9D8C909C8D929E71839172859474869677889A768496717484726A787B6F7E
+          796D7D6E677B6460765A577153536F4F4E6B535371484A693F42653E4669494D
+          6E43486A3E4164373E622A3459202E592C3A6437466C3549722F466D3045683F
+          547650617F5565815B69826773876B74886C768B62718B687B8F718398748399
+          7082976C7D946879946C79946B72906F718C858C9F939BA487929A838B938287
+          9181858F7E828B7F838F7D8391828490858695878A978A8D9A8D8E9C8E8F9D8B
+          909D8D929E8F959F72849271849371859676899B7A8E9F788496717283766C7C
+          807280796D7E69627757546E50516850506953526E53526E4F4F6B5151705453
+          7051526F45496C383E622E365E283461303F694051773A4C7333456B394D7142
+          55764F5C7953607B57627C5D687E5C62766B7386656F865F6E856C798E7D879B
+          7A889F6F829B6B7D9872809B758299878BA0969AA68F98A08791998289938387
+          9280868F7F828D7C85947F8391848593858695888B988B8D9B8C8E9D8C8F9D8D
+          929E8E949F9095A07184916F8592708696758B9C7C90A28193A47E8B9D767788
+          776E7D776B796D647560596F55536B54526D53536E5858725959765355725958
+          735756734C4D6B3F4566353C64323A6337426A39446A3F4E723D4D713D507147
+          55754E58724F58724D567047526F414E6B5366845C698456688564728A6C798F
+          65728D62739161708C6D728A686980858192A8A4AF979DA68C949B868D958387
+          928286907F85927F8594818492848695848896888B988A8E9B8B8D9D8B909E8D
+          939F8E959F9196A2728591708592728796768C9C7B93A3829AAA8C9EAF8A97AA
+          7C7F91766E7F7267756960715F5B7056536A5150684B4A644D4E6A5255725253
+          72565672525370404666353D60353C633740643C4569424D7146537748547441
+          4A6538425D3B4761444F6946516B3E4A693C50743C507045587C5E70905F7290
+          5C6A895663815D69846067816161796E677D7E76879A9EA9949BA48C929B858A
+          94828793818A99828794828694838694868896888A98888B988B8F9C8C929C8E
+          939F9196A29098A3708591718694718998758E9F7E94A4869CAD90A3B495A8BA
+          909DB07D8093786F82726777615C6E56546A4E4F644C4D64474A673D415E4246
+          65484D6C424766353C5B333C62313D66333E663A456A3C476A3E496A4A557442
+          4B672F3B58343F5C3F4C6A44506D44506D3F4E7131456B394C7357698B657797
+          6A80A060789961759764739271789187879A94909C99959FB1AFB6A5A7AD8991
+          99828C9B858C9A828997838695868896858896868896898D9B8B909C8E929F8F
+          95A09196A19199A46F8793738794748A99778F9F7F96A5879EAF92A6B79BADC0
+          A3B2C59CA9BD878C9F7771816B637459566C504D654E4D654648614042603A3E
+          5D3A3E5C363D5B343D603139602C36602F3C62374267354064394261434D6943
+          4B663D45623D4564434D6C414E703C4C6F31426633436C38497149587C637190
+          64789955729A496B99556E957984A0868A9F9091A297909CA399A5B5B1BA8E96
+          A088919F848C9A828895838895848795858997898D9A8B8F9D8B929D8D939F8D
+          95A38F96A29098A6718894718996738C997A90A18296A6889FB093A7B99DB0C2
+          A7B8C9ADBDCDA6B4C78C92A5706C7D615B6F57546A504E664B4B634D4D6A484A
+          653F4461383E5B393F5F333A6428305A283559353E62323B5C3B44614B516B4E
+          547142455D41475F49506A4B54724350704855774453784B577D5362865B6B8A
+          63749273839E68799A607599697999757F988E8EA39891A2968D9DB1ACB7979C
+          AA89919E818A96848997848997868C99878E9A8A8E9C8A909D8A919F88939F8B
+          94A28E98A4919BA6728A97718B99748D9C7991A18098A889A0B194A8BA9EB2C3
+          A9BBCBB0C0D1B2C2D1AAB8C98A90A26B677B5A576E56536D4F4C684B4A664649
+          663C405D373A57393E5D343D62242E55202C502C3659313A5A40455D42465A48
+          4B6248495D44465B45485F4C526C4F5570475475465175404C723D4D75556386
+          7A859F7B859D6E7896586C8E596F92808BA89393AA85789395859DAAA3B0969A
+          A7838B99838B99858C9A858D99878C9A878E9B868E9C87919F8893A08995A18D
+          96A48F99A4919BA5728D98728D99748E9E7C92A28299A98BA1B193AABAA0B3C3
+          ABBDCCB5C5D4BBCBD8BDCDDAB7C4D49399AD69667D55526C4E4E6A4949654B49
+          664243603838533238562732521C25491E294B2733522C36543D445B42435646
+          455A3C3C523638493A3E504144574A4E664954724953753D497036456D46567C
+          717D9A7F859D616E8E4E658D6A7C9F888EAB595475564D7D86799F91869EA0A2
+          B18B919D888E9C858D9A868E9B878F9D87919D88929E89949F8B95A28B95A18C
+          97A28E99A4919CA675909D748F9D7891A17C94A4839BAB8CA2B493AABB9FB4C4
+          ACBECDB8C8D5BECDDAC3D1DFC3D2E0B7C3D68C8FA464637A4F4D683F415D3C3C
+          583F3E57383954323853262F501620412A36552332532832523A3F5845455547
+          47583E3E502E3145252B413038503D42583D46654D5574434C6C3F4E7452658A
+          747D997D839D6775975970997183A6666C8F4B50786B638A80789D8A829E9C9B
+          AC8F969F8C949F89919B89929C87939D88949E87949E8A959F8C96A08B97A18D
+          9AA38F9BA5919DA67692A07792A07A93A27F96A6869DAD8DA3B596ABBDA3B4C5
+          AFBFCDB9C9D6C1CFDCC5D5E2CAD8E6CAD8E5C4D1E0A2A9BD67677E4C4A674040
+          5A3E3D573A3B523236501C2748212F513E4B693A44642D3754373B52373B4F40
+          40533336472730482F3E603D4C6C454E6C4852715A607C596480586889717F9D
+          9096AB7B85A25E76A04A6A9C6D84AA6B7EA4586B9461658A6F6F996F7497828B
+          9F84929984919983919B83939C87949D89959F8A96A08B97A18C98A28C9BA38C
+          9DA58E9EA6919EA87895A27995A27C96A58199A9869FAF8FA4B697ACBEA2B5C6
+          B0C0CEBAC9D6C1CFDDC8D7E4CCDBE9D2DEECD3DEECC8D4E49AA0B465657C4B49
+          66403F5B3C3B543237512E3B5D434F74343D58434A683D425C363B4E31364D36
+          374B2E334C333D58222A40303A54515A79596080646C866A7087737B957A839E
+          7C85A17183A84B6493496A9F627BA56F81A76277A16878A05E709C697DA48995
+          A98896A084939B84929C85939E8694A088959E88969F8996A08897A38999A58A
+          9BA58B9BA68C9DA87B95A57B96A57D97A7819BAB87A0B092A5B799ACBFA3B5C7
+          AFC0CEB8C9D6C2D0DDC9D7E4D0DDEAD5E0EED3E3F0D3E1EFCBD7E6A3ABBF6868
+          7F4C4865413F583136533D4F75314165232D49282E45494B6142425234384C38
+          3B503B445C13111704060B0302041D1820333447525B7A525F7F6D76946F799A
+          6F7D9F6779A153699A4C6A9D4F6CA0687AA76C7EAA6E80A9657AA37789AA8798
+          A38598A184949F84959F8496A08799A2899AA38A9CA48A9CA58B9DA68C9EA78D
+          9FA78E9FA98FA1AB7A98A57C96A67E98A7839CAC88A1B190A7B99AAEC0A5B6C7
+          B0C0CEB8C9D6C2D0DECAD7E5D0DCEAD5E0EFD8E4F2DAE6F4D7E4F2CCD8E7A3AB
+          BE73758A54516A3039593C51792D436B202A46090A153D3E4F404050343A4D36
+          3B514341520D0A0E040505030204100D10231F2D3A4B73445A845262895B6B94
+          5D6A94596692506598566B9C5D72A56676A57681AA858CAE7B88AC8393A7889B
+          A284979F84979F8699A18699A28697A28799A28A9CA58C9EA78DA0A88EA0A88E
+          A1AA8FA1AC90A2AD7B99A57C97A77F98A8829CAD89A2B391A8BA9CAFC0A6B9C8
+          B0C1CEB8C9D6C2D0DEC9D7E4CFDCE9D6E1EEDAE6F2DCE7F4DBE8F6D9E7F4D1DD
+          EDB7C2D3797F9536456839517D1E3563070C1E060914313748373B4B3B3F5238
+          415A3236461F14131D0D0A5C413B4734343139522E47773649794A57825D658F
+          5E66935B64905A6697606A97777FA5787FA57A80A78489AD808BAF8B9AA7859A
+          A1889CA18599A18699A28B9EA58A9EA88B9EA98A9DA8889DA98B9FA98EA0AB90
+          A3AD91A4AD92A4AE7C9BA67E98A77F98A9839CAD8BA2B495A8BA9EB0C1A7B8C9
+          AFC0CEB8C9D6C0D0DDC8D6E5CEDCEAD5E1EEDAE6F3DDE9F5DEEBF7DDEAF7DAE7
+          F5CEDCEB7B88A0344B742B44711426500203100F16292E35462C3344363B4E30
+          3A53343C54120A0C1E0D0E492A254B445740517D283E71414D794C517A5B5B84
+          545A864C5686545B8C5A5E8C6D719A676C967D80A67D81A77F83A58999A3899D
+          A5859AA2899FA68A9FA7869BA5879EA98EA1AB8EA2AD90A3AD8FA4AD8FA3AD8E
+          A3AE8EA4AF90A4AF7F9DA97F99A98099AB849DAE8BA2B495A8BB9FB1C2A9B9CA
+          B0C0CEB9C9D5BFCFDCC8D6E3CDDCE9D3E1EEDAE5F2DDE9F5DCE9F6DDE9F6D8E5
+          F3C1CFE15C6D8F3048751D325C0E1A3B080E241E2D4C252E412C33462A35482B
+          334A43507238405C2B30464447654C547E43507C3446784F527A585780575580
+          61628C5658855257854F517F5A5E8A6A6D967777A06A6C986D6E8D7F969F89A2
+          AA849EA7869EA98AA2AA8BA3AD8CA1AC8CA3AB8DA5AF90A6B091A7B190A8B192
+          A9B090A8B28EA9B27F9EA9809BAB819AAC849DAF8BA3B492A9BB9FB1C2A8B9CA
+          B0C0CFB8C8D5BECEDBC6D5E2CEDBE8D4DFEED7E4F2DCE9F5DEEAF6DBE8F5D2DF
+          EE9EAEC342567C2A345515203D0E152A0E1B391B2B4B27314726314527314530
+          344830385449527650557A51567B50537B303B68474E7A545176514D755C5983
+          66648C5B5B874D4F7D56547F6A678F6A679073719873709569647884969F89A5
+          AC8AA4AC86A0AA8AA4AC8DA7AF8DA9B28DA9B18BA8B08DA8B28FAAB391ACB38F
+          ACB390ACB390ABB47E9DAB829CAC829CAD859FB08BA2B494AABC9EB0C2A6B9CA
+          B0C0CEB7C8D5BECEDBC5D4E1CCDAE8D1DEEDD5E2F0DBE7F3DDE8F6D9E5F3BECC
+          DF526181363B57232337121527060B1F0C1C421B3057182848202D4A25304429
+          2F443134513436573C3F643B3D65373D6740457249477048466D48466E57577F
+          5B5983585682575784605E8C7370986D6A91787299706A8E89849490A6AE8DA7
+          AE8EA6B08CA7B18DA6AF8DAAB28FACB490ACB590ADB490ACB590ABB590ACB690
+          ADB691ADB691ADB57E9EAC819CAC829DAE869FB08CA3B592A9BB9EB0C2A5B7C8
+          AFC0CFB6C7D4BECDDAC3D4E1CAD9E6D0DEECD3E2EFD7E4F2D7E4F1C7D5E48996
+          AD323E5D2A2D4621243814182A16213D1D345F1F3762153062142954222F472B
+          3045363853383A582F3357393A60373C663C406848476E4442684C4A7357557E
+          5E5A825E5B8363618C6966916F6D94736F95756E93736F928596A58FA7B190A8
+          B18FA9B38FAAB48FABB590ACB691ADB791AEB792AEB891AFB892AFB891AEB892
+          ADBB91AEB992AEB87E9EAD829CAD839DAD86A0B18CA4B793AABD9CAFC2A4B6C7
+          AFC0CEB6C6D4BCCCD9C3D3E0C8D8E5CDDDEAD2E0EED6E4F1D2E0EEADB9CD4D5C
+          7A253252222E4A1F294119223B1C29461D32581E38650C275E0F265D1D2A4B39
+          3D563D3E56404160393A5D4342644342674B496E4B476B524F75555179635C84
+          625B816560846763896E6A91756F9478739568628777799692A7B491AAB392A9
+          B491AAB692ACB992ADB992AEBA93B0BA93B1BB94B2BB93B2BB94B2BB94B1BB92
+          B0B992AFB993B0B97E9DAC829BAC839DAD88A1B28EA5B794AABC9CAFC1A5B6C7
+          AEBFCEB5C6D4BCCCD9C1D2DFC7D8E5CCDCE9D0DFECD0E0EDC4D2E27886A03041
+          691C2B531D2D4F202B4720283E1E2C4A1A32600E2C630C25611129632330563D
+          405A4746604D4A69474568484668514D704A46674D486D4D4B6F5D577F6D658B
+          5E577D6661856A6388726B8F6F698C6A65867D7F9A96A3B093AAB692ADB991AB
+          B992ADBA93ADBA94AFBB93B0BD94B2BE95B4BD96B4BD95B4BD95B4BD94B3BC93
+          B1BB91B0BA91B0B87F9DAD829CAD849EAF88A2B38EA6B894AABC9CAFC1A4B5C6
+          ACBECDB4C5D2BBCBD8C1D1DEC8D7E4CBDAE8CEDDEACADAE8A7B5CA5B67882C3A
+          63213259263554282E452B304826345C0F29620B2564102B6A19336E26336046
+          4664534F6A575472514D6E4E4A6D504A6D4F4A6F534E73575275635C845C5578
+          665F826D66896B648771698A6B66857B809795A8B597AFBB96ACB994AEBB95AF
+          BD94AFBC94B0BD94B2BD95B3BE96B5BD96B5BE96B4BE96B5BE95B4BD95B4BC93
+          B2BB92B0B992B0B9839DAF849EAF86A0B189A3B48FA6B995ABBD9AAFC1A5B6C7
+          ADBECDB4C5D3BBCBD9C0CFDDC6D6E3C9DAE7CCDBE8C1CFDF94A0B8545F7F2C3B
+          641F2E523139552B2E4132354C2032600F296811296818327220346F333C694F
+          4C695753705D57795751754B456D4F496C585378554E725B5376564F755C5678
+          665D82635E816F66876C6483635D777E8AA099AFBD98B2C096B1BD96AFBD95B0
+          BE97B1C097B2C097B2BF97B3BF97B4BE95B3BE96B5BE96B5BE95B4BD95B4BD94
+          B3BC93B2BB92B1BA86A0B286A0B387A1B38AA3B68FA7BA94ACBE9DB0C2A6B7C8
+          AEBECEB5C6D3BBCBD8C0CFDDC5D6E3CAD8E5C9D9E6BDCBDD919DB647567A2435
+          5D25324E24293B2025362C385713295D182E6A1F346F293C762F3E73484A7361
+          5A7659536F5853764F496F4F4970554D76585278574F72504A6C5750755C557A
+          635C7F675F7E6F637E665C7457577A707F9C9AB0BF9AB2C198B2C197B2C098B3
+          C198B3C098B2C198B3C198B3C197B4BF97B3C096B4BF96B5BF96B5BE96B5BE95
+          B5BE94B4BD95B4BD88A1B488A1B589A2B68EA5B992A9BB97ADBF9FB2C3A7B8C9
+          AFC0CEB5C6D4BBCBD8C0CFDDC4D5E2CAD9E6C8D6E5AEBCCF8590AB59668A3442
+          67212C471A21342B334A29375E1C2F6623326928387038477A5059836C698779
+          748B6C697F625D7D5F5B7D5751754F486E544D71534D74534C71534D735C5378
+          63587A685E78685E775C56785256835D6C9296ADBE99B2C299B3C299B3C299B3
+          C29BB5C39BB5C49CB6C49AB5C399B5C399B4C299B5C199B6C199B5C198B6C198
+          B6C096B4C096B4BF89A2B789A2B78BA3B88EA6BB93AABC98ADBFA0B2C5A7B9CA
+          B0C0D0B6C7D5BCCCD9C1D1DEC5D5E2C0CFDDAFBDCF97A4BA7C88A35A66863040
+          641A27432A3247303A561E2E5E24346A222F62414F806E799F9AA5BCB1B9CBB8
+          C4D2ADB8C9ABB7C99FA7B97E7F97625F7D5D5B785D5B79575273504B6F534C6C
+          564E6E595272524F724E4E784C548551618D8BA4B899B3C39AB4C39BB5C39BB5
+          C49CB5C59CB5C59CB6C59CB7C59CB6C59CB7C49CB8C49DB9C49BB8C59BB7C49B
+          B7C49AB6C49AB5C38BA4BA8CA4BB8DA5BB91A9BD94ACBE99B0C1A0B4C6AABBCC
+          B1C3CFB8C9D6BDCDDAC2D2DFC1D1DEBFCDDDABB9CD9CA9BF8490A9606A8A4753
+          772C3C6226345718264F28376E2833693643757886A8A9B6CBCAD8E6D0DFEBCD
+          DCE8CDDDE9CADAE6C3D2DEA9B4C4A4B1C2A0AEC098A4B88991A65F5E7852506E
+          4C496B4B4A6F434673454A784B5183515D8D8EA5BA9BB4C49DB4C59CB5C69CB6
+          C69DB7C69EB8C69EBAC69EBAC69EBAC59EBAC69EBAC59EBAC69EBAC69CBAC59E
+          BAC59CB9C499B7C48EA6BC8FA6BC8FA8BD92ABBF98AFC19FB2C5A3B7C9ABBECE
+          B3C4D3BACAD8BECEDBC0D0DDC2D3E0B7C6D8A6B4C7A0AEC28F9DB295A2B85360
+          811F2F5C0B1B481B2D622432692F3B705A6892ADBCD1CFDDEAD6E4F1D5E3F0D4
+          E3EFD1E2EDCDDFEBC7D7E3C1D1DFC0D0DCBCCCD9B2C3D29CA9BB7A81965D617E
+          4B4B70474B723C426E3D42704B5080565F8C90A7BC9BB4C49CB5C59CB6C69EB8
+          C69FB9C8A0BBC8A0BBCAA1BCC9A0BBCAA1BBCAA1BCC9A0BBCAA1BCC8A0BBC9A0
+          BCC89FBBC79CB9C58EA8BD90A9BE92ABC095ADC19BB1C4A0B5C7A5BBCCADBFD1
+          B5C6D4BBCBD8BFCFDCC1D1DEBAC9DAAEBDCEAEBCCDA9B8CB97A6B976849D3849
+          701124520E2153182A64233067414C7B9AA9C3C7D6E6D8E5F2D6E5F2D6E4F1D2
+          E3EFCFE1ECCDDEE9C9DAE5C6D8E3C3D4E0BFCFDCB4C5D2A4B4C68E9CB1737D96
+          50517541456D363C683C406F4648735A628E93A7BC9BB4C59CB5C69DB8C7A0BA
+          CAA1BBCBA2BCCCA2BDCBA2BDCBA2BDCBA2BDCCA2BDCBA1BCCBA2BCCBA2BCCB9E
+          BCCA9FBCCA9EBAC991AABF93ABC094ADC299B1C29DB4C5A0B7C9A9BDCEB1C2D4
+          B6C7D7BBCBD8BCCDDABCCCD9BFCEDCBFCDDCAAB9CB9BA9BB8F9DB16672912D3D
+          67132453192B631F2C61303C707886A4CAD7E6D6E4F1D9E6F2D6E5F2D7E5F1D2
+          E2EECFDFEBCCDDE9C9DBE6C6D7E3C3D4E0BDCEDAB4C4D3A7B9C995A8BB717B96
+          4A4D71393E662F345F373B68403F6A555A8492A7BC9DB4C69DB6C79FBAC9A1BB
+          CBA2BCCCA3BDCDA4BECEA4BECEA4BECEA4BECEA4BECEA4BECEA4BECEA3BDCDA0
+          BCCC9EBCCB9DBBCB93ACC095AEC297AFC29BB3C59EB5C7A3BACCADBFD1B4C5D5
+          B9CAD7BDCEDBC0D0DEC4D5E2C5D4E2B5C4D4AEBCCE9DAABD8290A74B597B2738
+          61182B5E1F2F63293364525F8ABBC9DBD5E2F0D7E5F3D6E5F2D8E5F1D4E3EFD0
+          E0ECCEDFEACBDDE8C8DAE5C5D7E3C2D2DFBDCDDAB4C6D2AABBCB94A5BA727C9A
+          505575373D622F345E3337643A3B6853578392A6BB9CB5C79EB8C9A1BBCBA2BC
+          CCA3BDCDA5BFCEA6C0D0A6C0D0A6C0D1A6C0D1A6C0D0A6C0D0A6C0D0A5BFCFA5
+          BECFA1BDCE9CBCCC95ADC397AFC29AB2C49CB5C7A0B9CAA5BDCEAFC1D4B6C6D6
+          BACBDABECFDCC2D1DFC1D1DFB8C7D7B1BFCFAAB9CA8E9CAF6E7A943D496C2B3C
+          681D30671F30623441718D9DB8D4E4F2D5E5F2D5E4F3D5E4F0D4E3EFD2E1EDCE
+          E0EBCCDEEACADCE7C8D9E4C5D6E2C1D1DEBBCCD9B5C6D4AABCCC99A9BC818EA6
+          5F637E3A3E642A30592C315F33376350557F90A5BA9DB6C7A0BACAA2BCCCA3BD
+          CDA5BFCFA7C1D0A7C2D0A7C2D2A7C2D2A7C2D3A8C2D3A6C2D2A6C2D3A6C1D2A5
+          C0D1A5BECFA0BDCD97B0C39AB2C49CB4C6A0B8CAA4BCCDABBFD1B1C4D5B6C7D8
+          BBCAD9BDCEDBBDCDDABCCBD8BFCEDCB7C6D6A3B2C38693A75E69854552773643
+          712E3C6C313B6A657093C0D1E2D6E5F2D6E5F2D4E4F1D2E4EFD1E1EDD0DFEDCE
+          DFEBCCDEE9CBDBE7C8D8E4C4D4E1C0CFDDBACBD8B5C6D3ACBDCB9DADBE8B99AD
+          676C8545476A2A3059272E5E2D33614B517A92A8BD9FB8C9A1BBCCA3BDCDA5BF
+          CFA6C0D1A7C2D2A8C2D3A7C3D4A9C4D5AAC5D6AAC4D6AAC4D6A8C4D5A7C3D4A6
+          C2D3A6C1D2A3BECF9BB3C49CB5C79FB7C9A2BCCCA5BECFACC1D3B2C5D6B7C9D8
+          BCCCD9BFCFDCC3D4E1C1D0DFBECCDCB1C0D1909BAF79859A5E68865A6587444B
+          77454C7861678CA5B0C5D5E5F2D7E5F2D7E5F2D4E4F0D3E3EED1E1EDCEDFEBCD
+          DEEACBDCE7CADAE6C6D7E3C3D3E0BECEDBB9CAD7B4C5D2ADBFCCA1B1C292A0B4
+          6F78904A4E712C315C262F602E33634C547D95ACC1A0BACBA2BCCCA4BECFA6C0
+          D1A8C2D2A8C3D4AAC4D6ABC5D6ABC6D7ABC5D6AAC5D6AAC5D8AAC5D7A8C4D5A6
+          C2D3A6C1D2A2BFD09CB4C69EB6C8A1BBCCA4BECEA8C0D1AEC3D5B4C7D7BACBD9
+          BDCEDBC1D1DFBFCFDDBCCBDBB2C0D39FACC08894AA828DA66D77945C6587545C
+          84585F85929CB6C8D7E6D5E5F2D5E4F2D5E4F0D5E3EFD3E1EDD1E0ECCEDFEACB
+          DDE8CBDBE7C8D8E5C5D7E2C2D2DFBECEDBB9C9D6B4C5D2ABC0CEA5B7C698A7B9
+          76819843496D2E365F333966363B69545D8595ADC2A2BCCDA4BECEA6C0D0A7C1
+          D1A8C3D3AAC5D6ABC5D7ABC5D7AAC6D7AAC5D7ABC5D7A9C5D8A9C5D6A8C5D6A5
+          C3D5A6C1D3A3BFD09EB5C7A0B8CAA2BCCDA5BFD0AAC1D3AFC4D6B6C8D9BBCCDA
+          BECFDCBDCDDBBCCDDAB3C1D4AAB8CB99A6BA909DB2848FA76B75946B7696616A
+          8F7A84A2B7C5D5D4E3F1D5E4F1D6E4F1D4E4EFD5E2EED0E1ECCFDFEBCEDEEACC
+          DCE8CCDAE7C7D8E3C4D6E1C1D1DDBDCDDAB9CAD6B4C5D2ADC1CEA9BBC89DAEC0
+          78869C454E73333B663339653D416F59648997B0C5A2BCCDA4BECFA6C0D1A7C1
+          D3A8C3D5AAC5D6ABC5D7AAC5D6ABC5D8A9C6D7ABC5D9ABC5D8A9C5D7A9C5D6A5
+          C3D5A3C2D3A3C0D19EB6C8A1BACCA3BDCEA7BFD1ABC2D4B0C5D7B8CADBBCCDDB
+          BDCEDBBCCBDBB9C8D7B1BFD2A9B6CA96A3B79FADC17F8AA47882A0727A97868E
+          AAA5B1C6CDDCEAD5E5F2D5E4F1D4E4F2D4E4F0D3E1EDCFE0ECCFDFEBCCDEEACB
+          DCE8CADAE6C6D8E3C4D5E1C1D1DEBDCDDAB9CAD6B4C5D2AFC1CEA8BCCBA0B2C4
+          7B879F4E5577353C68353A69404572616B909BB4C9A3BDCEA6C0D1A7C1D2A9C3
+          D4ABC5D6ACC5D7ACC5D8ABC6D8ACC5D9ACC5D9ACC5D9ABC5D9A9C5D7A6C5D6A6
+          C3D4A3C1D2A2BFD29FB9CAA1BBCCA4BECFA8C0D2ADC3D5B2C6D8BACBDCBECEDC
+          BECFDCBECDDCB7C7D6B0BED0A8B6C89BA8BC95A0B7858DA88F99B09199AFA6B2
+          C6C2D1E0D4E5F2D5E5F2D5E5F1D5E4F1D3E3EFD2E2EED0E0ECCEDFEBCCDDE9CB
+          DCE7C9DAE6C6D7E3C4D5E1C1D1DEBDCDDAB9CAD7B4C5D3AEC2CEA6BECB9EB1C1
+          7C899F5962803F476F39416E464C77707D9FA0B9CCA5BFD0A7C1D2A8C2D5ABC4
+          D7ACC5D7ACC5D9ACC5DAADC6DAACC5D9ABC5DAABC5DAAAC5D8A9C5D6A7C5D7A2
+          C2D5A1C0D4A1BFD2A1BACBA2BCCDA6BFD0A9C2D3AFC5D7B4C8DABCCCDDBFCFDD
+          C0D0DDBECEDCB7C6D5B7C5D59EABBEAAB8CA959FB49BA4B9A6AEC2A9B5C6BFCC
+          DBCFDEECD6E6F3D5E5F2D5E5F2D5E4F1D3E3F0D0E2EDCFE0ECCEDEEBCCDDE9CA
+          DCE7C9D9E6C6D7E3C4D5E2C1D1DEBDCDDAB9CAD6B4C6D3AFC2CFA9BECC9FB0C2
+          8492A7616A84505477494E77555D847E8CA9A2BBCEA6C0D0A7C1D2A9C3D5ABC4
+          D7ACC5DAADC5DAADC5DAACC5DAABC6DBACC5DBABC5DBA7C5D9A8C4D9A4C4D7A2
+          C2D6A1C1D49FC0D3A1BBCCA4BDCEA7BFD1ABC2D4B0C5D7B6C9DABDCEDBC0D0DD
+          C1D1DEBECDDBB8C8D7ABB8CAACB8CAA7B2C5A0A9BCB7C3D3B3BCCDCBD7E5CBD7
+          E5D5E5F2D6E5F3D6E6F3D5E4F2D5E4F1D4E3EFD0E1EDCFE0ECCEDFEBCCDDE9CB
+          DCE7C9D9E6C6D8E3C4D6E1C1D1DEBDCDDAB9CAD6B4C5D2AEC2CFA9BECC9FB1C2
+          8997AB68708A5B618258597F686F938595B0A2BBCDA6C0D1A7C1D3AAC3D7ABC5
+          D7ABC5DAACC5DAACC5DAABC5DAABC5DAABC5DAA9C5DAA7C4D9A6C5D9A4C4D7A3
+          C2D7A2C2D6A1C1D4A2BCCDA6BED0A9C0D2ACC3D5B1C6D8B8C9DBBDCEDBBFD0DC
+          C1D1DEBFCEDBB7C7D5B4C3D2B6C3D2AFBBCCC3CEDCC5D0DECAD7E5CFDFECD1E0
+          EDD7E6F3D6E6F4D6E6F3D6E6F3D4E4F1D3E4F0D2E3EECFE1ECCEE0EBCDDFEACB
+          DCE7CADAE6C6D8E3C4D6E1C1D1DDBCCDDAB7C9D6B4C6D3ADC3CFA6BECC9EB1C2
+          8A9AAD6D77916368895F5F81717B9B8C9CB8A2BBCEA6BFD2A8C2D3AAC3D6ABC4
+          D8ACC4DAACC4DAADC5DBAAC5DAA9C6DBA9C5DBAAC5D8A9C5D9A6C5D9A5C4D8A4
+          C3D7A3C2D6A2C2D5A3BDCEA5BFD0A8C0D2AEC4D6B2C6D8B8CADBBCCDDBC1D1DE
+          C3D2DFBECDDBC0CFDDC1D0DEBCCBD9C5D1DFCDD9E7D0DDEBD2E2EFD4E3F0D7E4
+          F2D6E6F3D7E6F3D6E6F3D7E6F3D5E5F3D6E4F2D4E3EFD3E2EECFE0ECCEDFEBCC
+          DEE9CBDBE7C7D8E4C4D6E1C1D1DEBDCEDAB7CAD6B4C6D3AEC3CFA6BDCAA0B3C4
+          8B9AAD717D986C7793676A8B7884A28FA3BCA2BCCFA5BFD4A8C1D5A9C3D6A9C4
+          D7AAC4D8ABC4DAACC4DAABC5DBACC5DBAAC6DAABC6DAAAC5DAA6C5DAA6C4D9A4
+          C4D7A3C3D6A3C3D5A3BDCEA5BFD0A8C0D2AEC4D5B3C6D9B9CADBBDCEDBC0D1DE
+          C1D1DEC3D2DFC6D6E3C3D1DFC7D3E1CDDBE9CEDFECD5E4F1D5E5F2D6E5F2D7E7
+          F4D9E7F5D8E7F4D9E6F3DAE6F3D7E5F4D6E4F2D5E4F0D3E3EFD0E1EDCEE0EBCC
+          DEE9CADCE7C8DAE5C5D6E2C1D2DEBECFDBB9CBD8B3C7D4ACC3CFA5BDCC9EB4C5
+          8B9CAF828FA57681997178958290AA92A5BFA2BCD0A4BFD3A6C1D5A9C3D6AAC3
+          D7ABC4D9A9C5D9AAC4D9AAC5DAABC5DAABC6DBAAC6DBA8C5DAA7C5DAA5C5D8A4
+          C4D8A4C4D8A4C4D7A3BDCDA6BECFA9C0D2ADC3D5B1C5D8B9C9DBBCCDDABFCFDC
+          C2D2DFC5D5E2C6D6E3C8D6E4CCDCE9CFE0EDD2E2F0D5E5F2D5E6F2DAE6F4DAE8
+          F6DDE8F6DAE9F6DAE8F6DAE8F5DAE7F4D7E5F3D6E5F1D4E3F0D1E3EDCFE1ECCD
+          DFEACBDCE8C9DBE6C6D8E3C2D3DFBFD0DBB9CBD8B3C8D5ADC3CFA7C1CD9FB6C4
+          90A4B68897AA7E8AA27F8AA28B9BB094A9C1A4BDCFA5C0D3A7C1D6AAC3D8AAC3
+          D8A9C3D8AAC4D9ABC5D9AAC5DAAAC5DAAAC5DAAAC5D9A9C4D9A6C5D9A5C5D8A5
+          C5D8A4C4D7A4C5D7A2BCCDA4BDCEABBFD2AFC2D4B2C5D6B7C8D8BBCBD9BECEDB
+          C1D1DEC4D5E2C6D7E4CBD9E6CEDEEBD2E1EDD4E3F1D6E5F2D9E7F4DBE8F5DAE9
+          F6DCE9F8DDEAF8DBEAF7DCEAF7DAE8F5D9E7F3D6E6F2D4E4F1D3E5EDD0E3ECCE
+          E0EBCCDEE9CADCE7C6D8E3C4D5E0C0D1DDBBCCD9B4C9D6AFC5D2A9C2CEA1B7C5
+          95A8BA8C9AAE8896AB8C9AAE94A6BA98AEC4A5BED1A6C1D3A6C1D6A9C3D7AAC3
+          D8A9C4D7ABC4D8AAC4D8A9C5D9A8C4DAA9C4DAA7C4D9A6C4D9A6C4D9A5C4D8A5
+          C5D8A5C5D8A5C5D8A0BACBA4BCCDA9BED0ACC1D3B2C4D5B4C6D6BAC9D7BCCCD9
+          BFCFDCC3D3E0C6D7E3CBDAE6CFDEEBD4E1EED6E4F1D6E5F3DBE7F5DDEAF6DDEA
+          F7DEEAF8DCEAF7DDEBF7DDEBF7DCEAF6DCE9F5DAE7F3D6E5F1D3E5EFD1E3EECF
+          E1ECCDDFEACADCE7C7D9E4C3D5E0C0D2DDBCCEDAB6CAD7ADC6D3A8C2CEA2BBC9
+          99A9BD94A7B992A1B397A7BB99AEC09EB6C9A4BFD0A6C2D3A7C2D4A8C3D6A8C4
+          D6A8C4D6A9C4D6AAC4D6A9C4D8A8C4DAA9C4D9A5C3D9A5C4D8A4C4D9A4C3D8A4
+          C3D8A4C4D7A5C5D89FB8CAA2BBCCA9BDCFACBFD1B1C1D4B2C4D5B6C6D5BACAD7
+          BDCDDAC0D1DEC5D6E2CBDAE6CEDEEAD4E1EDD7E4F0D8E6F3DCE9F5DDEAF7DDEA
+          F8DCEBF7DEEBF8DFEBF7DDEAF7DDEAF7DCEAF6DCE9F4D8E6F2D4E4F1D2E4EECF
+          E1ECCDDFEACADDE6C7DAE4C4D6E1C1D3DDBCCFDCB4CBD7AEC8D5A9C3CFA2BDCA
+          9EB3C49BB0C19AACBF9AB0C19BB2C4A1BBCCA6C0D1A6C2D3A7C2D4A8C3D7A8C4
+          D6A8C4D5A8C4D6A9C4D7A7C4D8A6C4D9A8C4D8A6C3D8A5C2D7A3C2D7A3C2D7A4
+          C3D8A4C3D8A5C5D9A0B5C9A0B8CAA4BBCDAABDCFAFC0D1B0C2D2B4C5D3B7C7D5
+          BBCBD8BFCFDCC4D5E1C9D9E6CEDDEAD3E0EDD7E4F1DAE7F4DCE9F6DEEBF7DDEB
+          F7DFEBF8DEEBF9E0ECF8DEEAF8DEEAF7DCEAF6D9EAF4D9E7F3D6E5F2D3E4EFD0
+          E2EDCDDFEACADCE7C7D9E4C5D7E2C0D3DEBBCEDBB4CCD8AFC9D6ABC5D1A5C0CD
+          A2BDCB9FB9C89DB6C79DB6C7A0BACBA3BDCEA5BFD0A6C2D3A7C3D3A7C3D4A7C3
+          D5A8C3D7A8C4D7A7C4D7A7C4D6A7C3D8A5C3D7A3C2D7A3C2D7A3C2D7A4C3D8A5
+          C4D9A5C4D9A5C5D9000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000000000000000000000000000000000000000000000000000
+          0000000000000000
+        }
+      end
+      object SquirrelAboutLabel: TLabel
+        Left = 120
+        Height = 96
+        Top = 12
+        Width = 763
+        Alignment = taCenter
+        Anchors = [akTop, akLeft, akRight]
+        AutoSize = False
+        Caption = 'Squirrel - simple steganography program'
+        Font.Height = -32
+        Font.Name = 'Sans'
+        Layout = tlCenter
+        ParentColor = False
+        ParentFont = False
+      end
+    end
+  end
+  object StatusBar: TStatusBar
+    Left = 0
+    Height = 30
+    Top = 741
+    Width = 900
+    AutoSize = False
+    Font.Height = -24
+    Font.Name = 'Sans'
+    Panels = <>
+    ParentFont = False
+    UseSystemFont = False
+  end
+  object SaveStateDialog: TSaveDialog
+    Filter = 'text files|*.txt'
+    Left = 612
+    Top = 648
+  end
+  object OpenStateDialog: TOpenDialog
+    Filter = 'text files|*.txt'
+    Left = 540
+    Top = 648
+  end
+  object SaveImageDialog: TSaveDialog
+    Left = 708
+    Top = 648
+  end
+  object DCP_rijndael: TDCP_rijndael
+    Id = 9
+    Algorithm = 'Rijndael'
+    MaxKeySize = 256
+    BlockSize = 128
+    CipherMode = cmCFBblock
+    Left = 624
+    Top = 564
+  end
+  object DCP_twofish: TDCP_twofish
+    Id = 6
+    Algorithm = 'Twofish'
+    MaxKeySize = 256
+    BlockSize = 128
+    CipherMode = cmCFBblock
+    Left = 504
+    Top = 564
+  end
+  object DCP_serpent: TDCP_serpent
+    Id = 26
+    Algorithm = 'Serpent'
+    MaxKeySize = 256
+    BlockSize = 128
+    CipherMode = cmCFBblock
+    Left = 384
+    Top = 564
+  end
+end
