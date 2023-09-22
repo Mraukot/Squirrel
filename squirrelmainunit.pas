@@ -11,19 +11,30 @@ uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ComCtrls, StdCtrls,
   Calendar, FileCtrl, EditBtn, ExtCtrls, DCPsha512, DCPrijndael, DCPtwofish,
   DCPserpent, ExtendedNotebook, SpinEx, DateTimePicker, StrUtils,
-  BitmapOperations, DCPblockciphers, Character, base64;
+  BitmapOperations, DCPblockciphers, ubarcodes, Character, base64,
+  lcltype;
 
 type
 
   { TSquirrelMainForm }
 
   TSquirrelMainForm = class(TForm)
+      BarcodeQR: TBarcodeQR;
     BluePlane: TCheckBox;
+    CovertDescriptionEdit: TEdit;
+    ImageFileNameEdit: TEdit;
+    Label15: TLabel;
+    OpenImageDialog: TOpenDialog;
+    OpenImageButton: TButton;
     EncryptButton: TButton;
     DecryptButton: TButton;
     ChooseRijndael:TRadioButton;
     ChooseTwoFish:TRadioButton;
     ChooseSerpent:TRadioButton;
+    InsertCovertQRcode: TButton;
+    Label14: TLabel;
+    QRcodeMemo: TMemo;
+    QRcodePanel: TPanel;
     SquirrelAboutLabel: TLabel;
     SquirrelImage: TImage;
     ImageSaveAs: TButton;
@@ -41,6 +52,7 @@ type
     ClearToZero:TButton;
     RandomClearButton:TButton;
     AboutSheet: TTabSheet;
+    QRcodeSheet: TTabSheet;
     TextOptions: TGroupBox;
     ClearGroupBox:TGroupBox;
     SteganoAlgorithmSelection: TRadioGroup;
@@ -53,7 +65,6 @@ type
     CovertImage: TImage;
     OpenImage: TImage;
     OpenImageScrollbox: TScrollBox;
-    OpenFileNameEdit: TFileNameEdit;
     LoadStateButton: TButton;
     OpenStateDialog: TOpenDialog;
     CovertImageScrollbox: TScrollBox;
@@ -230,11 +241,13 @@ type
     procedure HowManyChange(Sender: TObject);
     procedure ImageSaveAsClick(Sender: TObject);
     procedure ImportStateClick(Sender: TObject);
+    procedure InsertCovertQRcodeClick(Sender: TObject);
     procedure LoadStateButtonClick(Sender: TObject);
     procedure MainNotebookChange(Sender: TObject);
     procedure MainNotebookChanging(Sender: TObject; var AllowChange: Boolean);
     procedure OpenFileNameEditAcceptFileName(Sender: TObject; var Value: String );
     procedure OpenFileNameEditChange(Sender: TObject);
+    procedure OpenImageButtonClick(Sender: TObject);
     procedure PasswdCheckboxChange(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure PasswordNotebookChange(Sender: TObject);
@@ -243,6 +256,7 @@ type
     function CelsiusToFahrenheit(tc:double):double;
     function FahrenheitToCelsius(tf:double):double;
     function GetPasswordCode(cb:TCheckBox):AnsiString;
+    procedure QRcodeMemoChange(Sender: TObject);
     procedure RandomClearButtonClick(Sender: TObject);
     procedure RedPlaneChange(Sender: TObject);
     procedure SaveStateButtonClick(Sender: TObject);
@@ -260,6 +274,8 @@ type
     CovertBitmap:TBitmap;
 
     PasswordHash:array[0..63] of byte;
+
+    procedure calculateQRrect(xsize,ysize:integer; var aRect:TRect);
 
   public
     procedure calcSHA512(s:AnsiString; var hash:array of byte);
@@ -597,21 +613,23 @@ procedure TSquirrelMainForm.ImageSaveAsClick(Sender: TObject);
 var
     fileName,fileNamePNG,ext,msg:AnsiString;
 begin
-    SaveImageDialog.FileName:= OpenFilenameEdit.Text;
+    SaveImageDialog.FileName:= ImageFileNameEdit.Text;
     if SaveImageDialog.Execute then begin
         fileName:=SaveImageDialog.FileName;
         ext:=ToLower(ExtractFileExt(fileName));
-        if (ext<>'.png') and (ext<>'.bmp') then begin
+        if (ext<>'.png') then begin
             fileNamePNG:=ChangeFileExt(fileName,'.png');
-            msg:='Filename: '+NewLine+
+
+            { msg:='Filename: '+NewLine+
                  fileName+NewLine+
                  'will be saved in PNG format as:'+NewLine+
                  fileNamePNG+NewLine+
                  'because '+ext+' format is not supported.';
-            Application.MessageBox(PChar(msg),'Squirrel');
+            Application.MessageBox(PChar(msg),'Squirrel');}
+
             fileName:=fileNamePNG;
         end;
-        OpenImage.Picture.SaveToFile(fileName);
+        OpenImage.Picture.SaveToFile(fileName,'png');
     end;
 end;
 
@@ -626,6 +644,99 @@ begin
     validateProgramSettings;
     CodesMemo.Lines.Text:=ProgramSettings.Text;
 {$ENDIF}
+end;
+
+procedure TSquirrelMainForm.calculateQRrect(xsize,ysize:integer; var aRect:TRect);
+var
+    size:integer;
+begin
+    size:=512;
+    if (xsize<512) or (ysize<512) then size:=256;
+    if (xsize<256) or (ysize<256) then size:=128;
+
+    aRect.Left:= (xsize-size) div 2;
+    aRect.Top:=  (ysize-size) div 2;
+    aRect.Width:=size;
+    aRect.Height:=size;
+end;
+
+
+procedure TSquirrelMainForm.InsertCovertQRcodeClick(Sender: TObject);
+var
+    bmpPL:TBitmap;
+    bmpQR:TBitmap;
+    aRect:TRect;
+
+    x,y,xMax,yMax:Integer;
+    pf:TPixelFormat;
+    col,colQR:Dword;
+    currRow,currRowQr:PDword;
+    currPix,currPixQr:PDword;
+    desc:string;
+
+begin
+    bmpPL:=TBitmap.Create;
+    bmpPL.Assign(OpenImage.Picture.Bitmap);
+
+    bmpQR:=TBitmap.Create;
+    bmpQR.PixelFormat:=pf32bit;
+    bmpQR.Width:=bmpPL.Width;
+    bmpQR.Height:=bmpPL.Height;
+
+    calculateQRrect(bmpQR.Width,bmpQR.Height,aRect);
+
+    //Clear7bitToZero(bmpPL);
+
+    xMax:=bmpPL.Width-1;
+    yMax:=bmpPL.Height-1;
+    pf:=bmpPL.PixelFormat;
+
+    bmpPL.BeginUpdate();
+    bmpQR.BeginUpdate();
+
+    bmpQR.Canvas.Brush.Color:=clWhite;
+    bmpQR.Canvas.Brush.Style:=bsSolid;
+    bmpQR.Canvas.FillRect(0,0,xMax,yMax);
+
+    BarcodeQR.PaintOnCanvas(bmpQR.Canvas,aRect);
+
+    desc:=CovertDescriptionEdit.Text;
+    if (desc<>'') then begin
+        bmpQR.Canvas.Brush.Color:=clWhite;
+        bmpQR.Canvas.Brush.Style:=bsSolid;
+        bmpQR.Canvas.Font.Color:=clBlack;
+        bmpQR.Canvas.Font.Height:= (aRect.Top div 2);
+        bmpQR.Canvas.Font.Name:='Liberation Serif';
+        bmpQR.Canvas.Font.Style:=[fsBold];
+        x:=bmpQR.Canvas.TextWidth(desc);
+        bmpQR.Canvas.TextExtent(desc);
+        bmpQR.Canvas.TextOut((xMax-x)div 2,aRect.Bottom+(aRect.Top div 8),desc);
+    end;
+
+    if ((pf=pf24bit) or (pf=pf32bit)) and (bmpPL.Width>0) and (bmpPL.Height>0) then begin
+        for y:=0 to yMax do begin
+            currRow:=bmpPL.ScanLine[y];
+            currRowQr:=bmpQR.ScanLine[y];
+            for x:=0 to xMax do begin
+                currPix:=PDword(currRow+x);
+                currPixQR:=PDword(currRowQR+x);
+                col:= currPix^;
+                colQR:=currPixQR^;
+                col:= col and $00FEFEFE;
+                if ((colQR and $00010101)<>0) then
+                    col:=col or $00010101;
+                currPix^:=col;
+            end;
+        end;
+    end;
+    bmpPL.EndUpdate();
+    bmpQR.EndUpdate();
+
+    bmpQR.Free;
+
+    OpenImage.Picture.Assign(bmpPL);
+    bmpPL.Free;
+//    FreeAndNil(bmp);
 end;
 
 procedure TSquirrelMainForm.LoadStateButtonClick(Sender: TObject);
@@ -686,10 +797,37 @@ begin
 
 end;
 
+procedure TSquirrelMainForm.OpenImageButtonClick(Sender: TObject);
+var
+    FileName:AnsiString;
+begin
+    OpenImageDialog.FileName:=ImageFileNameEdit.Text;
+    if OpenImageDialog.Execute then begin
+        FileName:=OpenImageDialog.FileName;
+        ImageFileNameEdit.Text:=FileName;
+        OpenImage.Picture.LoadFromFile(FileName);
+
+        FreeAndNil(CovertBitmap);
+        CovertBitmap:=TBitmap.Create;
+
+        CovertBitmap.Assign(OpenImage.Picture.Bitmap);
+        ExposeCovertImage(RedPlane.Checked,GreenPlane.Checked,BluePlane.Checked,
+                        ColourCheckBox.Checked, CovertBitmap);
+        CovertImage.Picture.Assign(CovertBitmap);
+
+        SteganoExtractAction(true);
+    end;
+end;
+
 function TSquirrelMainForm.GetPasswordCode(cb:TCheckBox):AnsiString;
 begin
     result:=ProgramSettings.Values[cb.Name];
     if result='' then result:=calculateQuickPassword(cb.Name,12);
+end;
+
+procedure TSquirrelMainForm.QRcodeMemoChange(Sender: TObject);
+begin
+    BarcodeQr.Text:=QRcodeMemo.Lines.Text;
 end;
 
 procedure TSquirrelMainForm.RandomClearButtonClick(Sender: TObject);
@@ -1089,10 +1227,24 @@ begin
 end;
 
 procedure TSquirrelMainForm.CovertImageSaveAsClick(Sender: TObject);
+var
+    fileName,msg:string;
 begin
-    SaveImageDialog.FileName:= OpenFilenameEdit.Text+'.7.png';
+    SaveImageDialog.FileName:= ImageFileNameEdit.Text+'.7.png';
     if SaveImageDialog.Execute then begin
-        CovertImage.Picture.SaveToFile(SaveImageDialog.FileName);
+        fileName:=SaveImageDialog.FileName;
+        if FileExists(fileName) then begin
+         msg:='File: '+NewLine+
+                 fileName+NewLine+
+                 'already exists.'+NewLine+
+                 'Are you sure you want to overwrite it?';
+            if (Application.MessageBox(PChar(msg),'Squirrel',MB_YESNO)=IDYES) then
+            begin
+                CovertImage.Picture.SaveToFile(SaveImageDialog.FileName,'png');
+            end;
+        end else begin
+            CovertImage.Picture.SaveToFile(SaveImageDialog.FileName,'png');
+        end;
     end;
 end;
 

@@ -536,10 +536,11 @@ begin
         b^:=0;
 
         actualChecksum:=read3Byte;
-        calculatedChecksum:=calculateChecksum(buffer,length) and $FFFFFF;
-
-        if actualChecksum=calculatedChecksum then begin
-            SetString(output, PChar(buffer), length);
+        if (length<>0) then begin
+            calculatedChecksum:=calculateChecksum(buffer,length) and $FFFFFF;
+            if actualChecksum=calculatedChecksum then begin
+                SetString(output, PChar(buffer), length);
+            end;
         end;
         FreeMem(buffer);
     end;

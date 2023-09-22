@@ -3,13 +3,12 @@
   <ProjectSession>
     <Version Value="12"/>
     <BuildModes Active="Release"/>
-    <Units Count="18">
+    <Units Count="23">
       <Unit0>
         <Filename Value="squirrel.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos Y="4"/>
+        <EditorIndex Value="7"/>
+        <CursorPos Y="24"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
       </Unit0>
@@ -20,7 +19,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="SquirrelMainUnit"/>
-        <CursorPos X="31" Y="33"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="1222"/>
+        <CursorPos X="20" Y="1239"/>
         <UsageCount Value="209"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,8 +30,9 @@
         <Filename Value="bitmapoperations.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="BitmapOperations"/>
-        <EditorIndex Value="1"/>
-        <CursorPos X="28" Y="21"/>
+        <EditorIndex Value="6"/>
+        <TopLine Value="510"/>
+        <CursorPos X="43" Y="526"/>
         <UsageCount Value="205"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -146,127 +148,170 @@
         <CursorPos X="3" Y="482"/>
         <UsageCount Value="17"/>
       </Unit17>
+      <Unit18>
+        <Filename Value="../../lazarus/lcl/include/rasterimage.inc"/>
+        <EditorIndex Value="5"/>
+        <TopLine Value="490"/>
+        <CursorPos Y="522"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit18>
+      <Unit19>
+        <Filename Value="../../lazarus/fpc/3.2.2/source/rtl/objpas/sysutils/sysutilh.inc"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="309"/>
+        <CursorPos X="13" Y="330"/>
+        <UsageCount Value="11"/>
+        <Loaded Value="True"/>
+      </Unit19>
+      <Unit20>
+        <Filename Value="../../lazarus/lcl/graphics.pp"/>
+        <UnitName Value="Graphics"/>
+        <EditorIndex Value="3"/>
+        <TopLine Value="887"/>
+        <CursorPos X="78" Y="907"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit20>
+      <Unit21>
+        <Filename Value="../../lazarus/lcl/forms.pp"/>
+        <UnitName Value="Forms"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="1503"/>
+        <CursorPos X="68" Y="1524"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit21>
+      <Unit22>
+        <Filename Value="../../lazarus/lcl/lcltype.pp"/>
+        <UnitName Value="LCLType"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="761"/>
+        <CursorPos X="9" Y="767"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+      </Unit22>
     </Units>
     <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="607" Column="5" TopLine="596"/>
+        <Caret Line="763" Column="11" TopLine="755"/>
       </Position1>
       <Position2>
-        <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="608" Column="20" TopLine="586"/>
+        <Filename Value="../../lazarus/fpc/3.2.2/source/rtl/objpas/sysutils/sysutilh.inc"/>
+        <Caret Line="330" Column="21" TopLine="309"/>
       </Position2>
       <Position3>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="49" Column="33" TopLine="35"/>
+        <Caret Line="763" Column="11" TopLine="755"/>
       </Position3>
       <Position4>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="608" Column="21" TopLine="595"/>
+        <Caret Line="765" Column="11" TopLine="757"/>
       </Position4>
       <Position5>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="637" Column="28" TopLine="603"/>
+        <Caret Line="783" Column="7" TopLine="757"/>
       </Position5>
       <Position6>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="643" Column="28" TopLine="615"/>
+        <Caret Line="799" Column="8" TopLine="758"/>
       </Position6>
       <Position7>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="678" Column="28" TopLine="656"/>
+        <Caret Line="798" Column="8" TopLine="757"/>
       </Position7>
       <Position8>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="683" Column="27" TopLine="656"/>
+        <Caret Line="799" Column="8" TopLine="758"/>
       </Position8>
       <Position9>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="705" Column="27" TopLine="683"/>
+        <Caret Line="614" Column="49" TopLine="593"/>
       </Position9>
       <Position10>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="721" Column="28" TopLine="705"/>
+        <Caret Line="786" Column="5" TopLine="782"/>
       </Position10>
       <Position11>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="743" Column="28" TopLine="721"/>
+        <Caret Line="1213" Column="49" TopLine="1192"/>
       </Position11>
       <Position12>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="756" Column="28" TopLine="734"/>
+        <Caret Line="1214" Column="49" TopLine="1193"/>
       </Position12>
       <Position13>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="769" Column="28" TopLine="747"/>
+        <Caret Line="1215" Column="49" TopLine="1194"/>
       </Position13>
       <Position14>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="785" Column="28" TopLine="763"/>
+        <Caret Line="705" Column="36" TopLine="674"/>
       </Position14>
       <Position15>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="791" Column="28" TopLine="772"/>
+        <Caret Line="704" Column="25" TopLine="683"/>
       </Position15>
       <Position16>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="809" Column="28" TopLine="787"/>
+        <Caret Line="707" Column="9" TopLine="686"/>
       </Position16>
       <Position17>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="814" Column="27" TopLine="799"/>
+        <Caret Line="716" Column="48" TopLine="691"/>
       </Position17>
       <Position18>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="820" Column="28" TopLine="811"/>
+        <Caret Line="631" Column="34" TopLine="611"/>
       </Position18>
       <Position19>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="13" Column="12"/>
+        <Caret Line="617" Column="18" TopLine="611"/>
       </Position19>
       <Position20>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="277" Column="19" TopLine="243"/>
+        <Caret Line="1237" Column="13" TopLine="1229"/>
       </Position20>
       <Position21>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="608" Column="29" TopLine="574"/>
+        <Caret Line="628" Column="64" TopLine="612"/>
       </Position21>
       <Position22>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="1157" Column="26" TopLine="1132"/>
+        <Caret Line="1243" Column="80" TopLine="1229"/>
       </Position22>
       <Position23>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="1163" Column="26" TopLine="1132"/>
+        <Caret Line="1241" Column="35" TopLine="1220"/>
       </Position23>
       <Position24>
-        <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="1364" Column="51" TopLine="1337"/>
+        <Filename Value="../../lazarus/lcl/forms.pp"/>
+        <Caret Line="1524" Column="65" TopLine="1505"/>
       </Position24>
       <Position25>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="16" Column="22"/>
+        <Caret Line="1241" Column="33" TopLine="1220"/>
       </Position25>
       <Position26>
-        <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="608" Column="5" TopLine="596"/>
+        <Filename Value="../../lazarus/lcl/forms.pp"/>
+        <Caret Line="1524" Column="68" TopLine="1503"/>
       </Position26>
       <Position27>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="1041" Column="64" TopLine="1028"/>
+        <Caret Line="1241" Column="70" TopLine="1220"/>
       </Position27>
       <Position28>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="770" Column="5" TopLine="768"/>
+        <Caret Line="15" Column="10"/>
       </Position28>
       <Position29>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="787" Column="3" TopLine="768"/>
+        <Caret Line="1240" Column="20" TopLine="1223"/>
       </Position29>
       <Position30>
         <Filename Value="squirrelmainunit.pas"/>
-        <Caret Line="14" Column="55"/>
+        <Caret Line="1239" Column="20" TopLine="1222"/>
       </Position30>
     </JumpHistory>
     <RunParams>

@@ -1,11 +1,11 @@
 object SquirrelMainForm: TSquirrelMainForm
-  Left = 715
-  Height = 771
-  Top = 311
-  Width = 900
+  Left = 1166
+  Height = 741
+  Top = 197
+  Width = 947
   Caption = 'Squirrel'
-  ClientHeight = 771
-  ClientWidth = 900
+  ClientHeight = 741
+  ClientWidth = 947
   Constraints.MinHeight = 600
   Constraints.MinWidth = 900
   DesignTimePPI = 144
@@ -16,9 +16,9 @@ object SquirrelMainForm: TSquirrelMainForm
   LCLVersion = '2.2.6.0'
   object MainNotebook: TExtendedNotebook
     Left = 0
-    Height = 741
+    Height = 711
     Top = 0
-    Width = 900
+    Width = 947
     ActivePage = PasswordSheet
     Align = alClient
     TabIndex = 0
@@ -27,8 +27,8 @@ object SquirrelMainForm: TSquirrelMainForm
     OnChanging = MainNotebookChanging
     object PasswordSheet: TTabSheet
       Caption = 'Password'
-      ClientHeight = 703
-      ClientWidth = 892
+      ClientHeight = 673
+      ClientWidth = 939
       object PasswordNotebook: TExtendedNotebook
         Left = 12
         Height = 444
@@ -1495,13 +1495,13 @@ object SquirrelMainForm: TSquirrelMainForm
     end
     object OpenTextSheet: TTabSheet
       Caption = 'Open text'
-      ClientHeight = 703
-      ClientWidth = 892
+      ClientHeight = 673
+      ClientWidth = 939
       object OpenText: TMemo
         Left = 12
-        Height = 677
+        Height = 647
         Top = 12
-        Width = 871
+        Width = 918
         Anchors = [akTop, akLeft, akRight, akBottom]
         Font.Height = -23
         Font.Name = 'Monospace'
@@ -1513,13 +1513,13 @@ object SquirrelMainForm: TSquirrelMainForm
     end
     object EncryptionSheet: TTabSheet
       Caption = 'Encryption'
-      ClientHeight = 703
-      ClientWidth = 892
+      ClientHeight = 673
+      ClientWidth = 939
       object EncryptedText: TMemo
         Left = 12
-        Height = 631
+        Height = 601
         Top = 60
-        Width = 871
+        Width = 918
         Anchors = [akTop, akLeft, akRight, akBottom]
         Font.Height = -23
         Font.Name = 'Monospace'
@@ -1583,13 +1583,13 @@ object SquirrelMainForm: TSquirrelMainForm
     end
     object SteganographySheet: TTabSheet
       Caption = 'Steganography'
-      ClientHeight = 703
-      ClientWidth = 892
+      ClientHeight = 673
+      ClientWidth = 939
       object SteganographyPageControl: TPageControl
         Left = 12
-        Height = 628
+        Height = 598
         Top = 72
-        Width = 871
+        Width = 918
         ActivePage = SteganoSheet
         Anchors = [akTop, akLeft, akRight, akBottom]
         TabIndex = 1
@@ -1597,20 +1597,20 @@ object SquirrelMainForm: TSquirrelMainForm
         OnChange = SteganographyPageControlChange
         object OpenImageSheet: TTabSheet
           Caption = 'Open image'
-          ClientHeight = 590
-          ClientWidth = 863
+          ClientHeight = 560
+          ClientWidth = 910
           object OpenImageScrollbox: TScrollBox
             Left = 0
-            Height = 488
+            Height = 458
             Top = 60
-            Width = 857
+            Width = 904
             HorzScrollBar.Page = 90
             HorzScrollBar.Tracking = True
             VertScrollBar.Page = 90
             VertScrollBar.Tracking = True
             Anchors = [akTop, akLeft, akRight, akBottom]
-            ClientHeight = 484
-            ClientWidth = 853
+            ClientHeight = 454
+            ClientWidth = 900
             TabOrder = 0
             object OpenImage: TImage
               Left = 0
@@ -1621,12 +1621,13 @@ object SquirrelMainForm: TSquirrelMainForm
             end
           end
           object ImageSaveAs: TButton
-            Left = 677
+            Left = 568
             Height = 38
+            Hint = 'Use this option to save an image containing steganographic message.'
             Top = 12
-            Width = 168
+            Width = 332
             Anchors = [akTop, akRight]
-            Caption = 'Save Image As'
+            Caption = 'Save result image as'
             OnClick = ImageSaveAsClick
             TabOrder = 1
             TabStop = False
@@ -1634,8 +1635,8 @@ object SquirrelMainForm: TSquirrelMainForm
         end
         object SteganoSheet: TTabSheet
           Caption = 'Method'
-          ClientHeight = 590
-          ClientWidth = 863
+          ClientHeight = 560
+          ClientWidth = 910
           object SteganoAlgorithmSelection: TRadioGroup
             Left = 12
             Height = 168
@@ -1736,8 +1737,8 @@ object SquirrelMainForm: TSquirrelMainForm
         end
         object CovertImageSheet: TTabSheet
           Caption = 'Covert image'
-          ClientHeight = 590
-          ClientWidth = 863
+          ClientHeight = 560
+          ClientWidth = 910
           object ColourCheckBox: TCheckBox
             Left = 408
             Height = 29
@@ -1751,16 +1752,16 @@ object SquirrelMainForm: TSquirrelMainForm
           end
           object CovertImageScrollbox: TScrollBox
             Left = 0
-            Height = 527
+            Height = 497
             Top = 60
-            Width = 866
+            Width = 913
             HorzScrollBar.Page = 90
             HorzScrollBar.Tracking = True
             VertScrollBar.Page = 90
             VertScrollBar.Tracking = True
             Anchors = [akTop, akLeft, akRight, akBottom]
-            ClientHeight = 523
-            ClientWidth = 862
+            ClientHeight = 493
+            ClientWidth = 909
             TabOrder = 1
             object CovertImage: TImage
               Left = 0
@@ -1812,43 +1813,114 @@ object SquirrelMainForm: TSquirrelMainForm
             ParentColor = False
           end
           object CovertImageSaveAs: TButton
-            Left = 686
+            Left = 621
             Height = 38
             Top = 12
-            Width = 168
+            Width = 280
             Anchors = [akTop, akRight]
-            Caption = 'Save Image As'
+            Caption = 'Save covert image as'
             OnClick = CovertImageSaveAsClick
             TabOrder = 5
             TabStop = False
           end
         end
+        object QRcodeSheet: TTabSheet
+          Caption = 'Insert covert QR code'
+          ClientHeight = 560
+          ClientWidth = 910
+          object QRcodePanel: TPanel
+            Left = 390
+            Height = 560
+            Top = 0
+            Width = 520
+            Align = alRight
+            ClientHeight = 560
+            ClientWidth = 520
+            TabOrder = 0
+            object BarcodeQR: TBarcodeQR
+              Left = 0
+              Height = 512
+              Top = 0
+              Width = 520
+              ParentColor = False
+              Text = 'TBarcodeQR'
+            end
+          end
+          object QRcodeMemo: TMemo
+            Left = 8
+            Height = 392
+            Top = 40
+            Width = 376
+            Anchors = [akTop, akLeft, akRight]
+            Lines.Strings = (
+              'text'
+            )
+            OnChange = QRcodeMemoChange
+            TabOrder = 1
+          end
+          object Label14: TLabel
+            Left = 8
+            Height = 25
+            Top = 11
+            Width = 127
+            Caption = 'Text in QR code:'
+            ParentColor = False
+          end
+          object InsertCovertQRcode: TButton
+            Left = 8
+            Height = 38
+            Top = 520
+            Width = 376
+            Anchors = [akTop, akLeft, akRight]
+            Caption = 'Insert covert QR code'
+            OnClick = InsertCovertQRcodeClick
+            TabOrder = 2
+          end
+          object Label15: TLabel
+            Left = 8
+            Height = 25
+            Top = 440
+            Width = 149
+            Caption = 'Covert description:'
+            ParentColor = False
+          end
+          object CovertDescriptionEdit: TEdit
+            Left = 8
+            Height = 33
+            Top = 472
+            Width = 376
+            TabOrder = 3
+          end
+        end
       end
-      object OpenFileNameEdit: TFileNameEdit
-        Left = 12
+      object OpenImageButton: TButton
+        Left = 767
         Height = 33
         Top = 12
-        Width = 871
-        OnAcceptFileName = OpenFileNameEditAcceptFileName
-        FilterIndex = 0
-        HideDirectories = False
-        ButtonWidth = 34
-        NumGlyphs = 1
-        Anchors = [akTop, akLeft, akRight]
-        MaxLength = 0
+        Width = 160
+        Anchors = [akTop, akRight]
+        Caption = 'Open Image'
+        OnClick = OpenImageButtonClick
         TabOrder = 1
-        OnChange = OpenFileNameEditChange
+      end
+      object ImageFileNameEdit: TEdit
+        Left = 8
+        Height = 33
+        Top = 12
+        Width = 743
+        Anchors = [akTop, akLeft, akRight]
+        TabOrder = 2
       end
     end
     object AboutSheet: TTabSheet
       Caption = 'About'
-      ClientHeight = 703
-      ClientWidth = 892
+      ClientHeight = 673
+      ClientWidth = 939
       object AboutMemo: TMemo
         Left = 12
-        Height = 571
+        Height = 541
         Top = 120
-        Width = 871
+        Width = 918
         Anchors = [akTop, akLeft, akRight, akBottom]
         ScrollBars = ssAutoBoth
         TabOrder = 0
@@ -2271,7 +2343,7 @@ object SquirrelMainForm: TSquirrelMainForm
         Left = 120
         Height = 96
         Top = 12
-        Width = 763
+        Width = 810
         Alignment = taCenter
         Anchors = [akTop, akLeft, akRight]
         AutoSize = False
@@ -2287,8 +2359,8 @@ object SquirrelMainForm: TSquirrelMainForm
   object StatusBar: TStatusBar
     Left = 0
     Height = 30
-    Top = 741
-    Width = 900
+    Top = 711
+    Width = 947
     AutoSize = False
     Font.Height = -24
     Font.Name = 'Sans'
@@ -2298,17 +2370,18 @@ object SquirrelMainForm: TSquirrelMainForm
   end
   object SaveStateDialog: TSaveDialog
     Filter = 'text files|*.txt'
-    Left = 612
-    Top = 648
+    Left = 528
+    Top = 696
   end
   object OpenStateDialog: TOpenDialog
     Filter = 'text files|*.txt'
-    Left = 540
-    Top = 648
+    Left = 376
+    Top = 696
   end
   object SaveImageDialog: TSaveDialog
-    Left = 708
-    Top = 648
+    Filter = 'PNG image|*.png'
+    Left = 704
+    Top = 696
   end
   object DCP_rijndael: TDCP_rijndael
     Id = 9
@@ -2316,8 +2389,8 @@ object SquirrelMainForm: TSquirrelMainForm
     MaxKeySize = 256
     BlockSize = 128
     CipherMode = cmCFBblock
-    Left = 624
-    Top = 564
+    Left = 256
+    Top = 696
   end
   object DCP_twofish: TDCP_twofish
     Id = 6
@@ -2325,8 +2398,8 @@ object SquirrelMainForm: TSquirrelMainForm
     MaxKeySize = 256
     BlockSize = 128
     CipherMode = cmCFBblock
-    Left = 504
-    Top = 564
+    Left = 160
+    Top = 696
   end
   object DCP_serpent: TDCP_serpent
     Id = 26
@@ -2334,7 +2407,13 @@ object SquirrelMainForm: TSquirrelMainForm
     MaxKeySize = 256
     BlockSize = 128
     CipherMode = cmCFBblock
-    Left = 384
-    Top = 564
+    Left = 56
+    Top = 696
+  end
+  object OpenImageDialog: TOpenDialog
+    Title = 'Open image file'
+    Filter = 'PNG image|*.png|JPEG image|*.jpg;*.jpeg'
+    Left = 800
+    Top = 696
   end
 end
